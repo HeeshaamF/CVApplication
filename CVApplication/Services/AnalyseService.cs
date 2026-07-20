@@ -140,9 +140,11 @@ public class AnalyseService : IAnalyseService
         return _context.AnalyseCVs
             .Include(a => a.Recommandations)
             .Include(a => a.CV)
+            .Include(a => a.OffreEmploi) 
             .Where(a => a.CVId == cvId)
             .ToList();
     }
+
     
     private string ExtraireTextePdf(string chemin)
     {

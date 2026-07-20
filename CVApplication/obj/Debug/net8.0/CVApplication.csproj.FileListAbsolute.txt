@@ -357,3 +357,4 @@ H:\Desktop\CVApplication\CVApplication\bin\Debug\net8.0\runtimes\win-x64\native\
 H:\Desktop\CVApplication\CVApplication\bin\Debug\net8.0\runtimes\win-x64\native\qpdf.dll
 H:\Desktop\CVApplication\CVApplication\bin\Debug\net8.0\runtimes\win-x86\native\QuestPdfSkia.dll
 H:\Desktop\CVApplication\CVApplication\bin\Debug\net8.0\runtimes\win-x86\native\qpdf.dll
+H:\Desktop\CVApplication\CVApplication\obj\Debug\net8.0\CVApplication.sourcelink.json

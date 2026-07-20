@@ -103,4 +103,24 @@ public class AnalyseController : Controller
 
         return View(analyses);
     }
+    
+    [HttpGet]
+    public async Task<IActionResult> Comparaisons(int cvId)
+    {
+        var cv = _analyseService.GetCVById(cvId);
+        if (cv == null) return NotFound();
+
+        var analyses = _analyseService.GetAnalysesByCVId(cvId)
+            .Where(a => a.OffreEmploiId != null)
+            .ToList();
+
+        var model = new AnalyseCVViewModel
+        {
+            CV = cv,
+            Analyses = analyses
+        };
+
+        return View(model);
+    }
+
 }

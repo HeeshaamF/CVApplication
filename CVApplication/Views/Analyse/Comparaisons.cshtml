@@ -1,0 +1,39 @@
+﻿@model CVApplication.ViewModels.AnalyseCVViewModel
+
+<h2>Comparaisons du CV : @Model.CV.Nom</h2>
+
+<table class="table table-bordered mt-3">
+    <thead>
+    <tr>
+        <th>Offre</th>
+        <th>Score Matching</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var a in Model.Analyses)
+    {
+        <tr>
+            <td>
+                @if (a.OffreEmploi != null)
+                {
+                    <span class="badge bg-success">@a.OffreEmploi.Titre</span>
+                }
+                else
+                {
+                    <span class="badge bg-secondary">Non comparé</span>
+                }
+            </td>
+            <td>
+                @if (a.OffreEmploi != null)
+                {
+                    @($"{a.ScoreMatching} %")
+                }
+                else
+                {
+                    <span class="badge bg-secondary">—</span>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
