@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CVApplication.Models.OffreEmploi>
+
+<h2>Gestion des offres d'emploi</h2>
+
+<p>
+    <a asp-action="Create"
+       class="btn btn-success">
+        Ajouter une offre
+    </a>
+</p>
+
+<table class="table table-striped">
+
+    <thead>
+
+    <tr>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>Compétences</th>
+        <th>Actions</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    @foreach (var offre in Model)
+    {
+        <tr>
+
+            <td>@offre.Titre</td>
+
+            <td>@offre.Description</td>
+
+            <td>@offre.CompetencesAttendues</td>
+
+            <td>
+
+                <a asp-action="Edit" asp-route-id="@offre.Id" class="btn btn-warning btn-sm">
+                    Modifier
+                </a>
+
+                <a asp-action="Delete" asp-route-id="@offre.Id" class="btn btn-danger btn-sm">
+                    Supprimer
+                </a>
+
+            </td>
+
+        </tr>
+    }
+
+    </tbody>
+
+</table>

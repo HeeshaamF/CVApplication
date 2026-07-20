@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - CVApplication</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/CVApplication.styles.css" asp-append-version="true"/>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="alert alert-warning">
+
+            Connecté :
+            @User.Identity?.IsAuthenticated
+
+            <br/>
+
+            Nom :
+            @User.Identity?.Name
+
+            <br/>
+
+            Admin :
+            @User.IsInRole("Admin")
+
+            <br/>
+
+            Candidat :
+            @User.IsInRole("Candidat")
+
+        </div>
+        <div class="container-fluid">
+
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                CVApplication
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            Accueil
+                        </a>
+                    </li>
+
+                    @if (User.IsInRole("Candidat"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="CV" asp-action="MesCV">
+                                Mes CV
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="CV" asp-action="UploadCV">
+                                Déposer un CV
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Analyse" asp-action="MesAnalyses">
+                                Mes analyses
+                            </a>
+                        </li>
+                    }
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="Index">
+                                Administration
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="OffreEmploi" asp-action="Index">
+                                Offres d'emploi
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+
+                <ul class="navbar-nav">
+
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                       
+                        <li class="nav-item">
+
+                            <form asp-controller="Account" asp-action="Logout" method="post">
+
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit" class="btn btn-link nav-link">
+                                    Déconnexion
+                                </button>
+
+                            </form>
+
+                        </li>
+                    }
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

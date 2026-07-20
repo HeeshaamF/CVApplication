@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Accueil";
+}
+
+<div class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8 text-center mt-5">
+
+            @if (!User.Identity!.IsAuthenticated)
+            {
+                <h1 class="display-3 text-primary fw-bold">
+                    CV Application
+                </h1>
+
+                <p class="lead mt-4">
+                    Plateforme intelligente d'analyse et de correction automatique de CV.
+                </p>
+
+                <p>
+                    Déposez votre CV et obtenez des recommandations personnalisées.
+                </p>
+
+                <div class="mt-5">
+                    <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg me-3">
+                        Connexion
+                    </a>
+
+                    <a asp-controller="Account" asp-action="Register" class="btn btn-success btn-lg">
+                        Inscription
+                    </a>
+                </div>
+            }
+            else if (User.IsInRole("Admin"))
+            {
+                <h1 class="display-3 text-danger fw-bold">
+                    Espace Administrateur
+                </h1>
+
+                <p class="lead mt-4">
+                    Bienvenue @User.Identity.Name
+                </p>
+
+                <div class="mt-5">
+
+                    <a asp-controller="Admin" asp-action="Index" class="btn btn-danger btn-lg me-2">
+                        Tableau de bord
+                    </a>
+
+                    <a asp-controller="OffreEmploi" asp-action="Index" class="btn btn-primary btn-lg">
+                        Offres d'emploi
+                    </a>
+
+                </div>
+            }
+            else
+            {
+                <h1 class="display-3 text-primary fw-bold">
+                    Espace Candidat
+                </h1>
+
+                <p class="lead mt-4">
+                    Bienvenue @User.Identity.Name
+                </p>
+
+                <div class="mt-5">
+                    <a asp-controller="CV" asp-action="UploadCV" class="btn btn-primary btn-lg me-3">
+                        Déposer un CV
+                    </a>
+
+                    <a asp-controller="Analyse" asp-action="MesAnalyses" class="btn btn-success btn-lg">
+                        Mes analyses
+                    </a>
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</div>

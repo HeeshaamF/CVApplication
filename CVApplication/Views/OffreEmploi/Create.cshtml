@@ -1,0 +1,42 @@
+﻿@model CVApplication.Models.OffreEmploi
+
+@{
+    ViewData["Title"] = "Nouvelle offre";
+}
+
+<form asp-action="Create" method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Titre" class="form-label"></label>
+        <input asp-for="Titre" class="form-control"/>
+        <span asp-validation-for="Titre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CompetencesAttendues" class="form-label"></label>
+        <textarea asp-for="CompetencesAttendues" class="form-control"></textarea>
+        <span asp-validation-for="CompetencesAttendues" class="text-danger"></span>
+
+        <small class="text-muted">
+            Exemple :
+            C#, ASP.NET Core, SQL Server, Entity Framework, Bootstrap
+        </small>
+    </div>
+
+    <button class="btn btn-success">
+        Enregistrer
+    </button>
+
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"/>
+}

@@ -1,0 +1,469 @@
+{
+  "Files": [
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CVApplication.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CVApplication.bundle.scp.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\00ea43e6-04c7-4551-804d-8c33d1e86a1c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\00ea43e6-04c7-4551-804d-8c33d1e86a1c.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\024b2246-a6a9-4949-9c1e-3bb1436579a8.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\024b2246-a6a9-4949-9c1e-3bb1436579a8.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\0690b05e-ae7b-4222-bd4a-d83603759226.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\0690b05e-ae7b-4222-bd4a-d83603759226.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\094d60bf-be22-44dd-aea5-a92ec7a2e594.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\094d60bf-be22-44dd-aea5-a92ec7a2e594.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\0c210c38-baae-4f9d-8325-bdae70f1ab39.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\0c210c38-baae-4f9d-8325-bdae70f1ab39.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\110853eb-322f-4e9b-9965-f928198dd12f.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\110853eb-322f-4e9b-9965-f928198dd12f.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\116125d3-f71c-48b7-b196-c6e6f78dc534.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\116125d3-f71c-48b7-b196-c6e6f78dc534.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\132a6609-dc70-4249-8768-4a505d24e49d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\132a6609-dc70-4249-8768-4a505d24e49d.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\149afe6a-d1b6-41da-b209-6334d41e7e81.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\149afe6a-d1b6-41da-b209-6334d41e7e81.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\28c2b051-5efa-44ed-b65b-96800f2119a3.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\28c2b051-5efa-44ed-b65b-96800f2119a3.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\2956b946-2c4e-46a4-ab56-5d638ae8acbc.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\2956b946-2c4e-46a4-ab56-5d638ae8acbc.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\2c1bb4c3-cf74-4665-a437-50b3422c05b6.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\2c1bb4c3-cf74-4665-a437-50b3422c05b6.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\2f7abbc9-6e50-4461-9cfb-c43036aac2d3.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\2f7abbc9-6e50-4461-9cfb-c43036aac2d3.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\2ff69997-761e-4d28-a88e-35e9d1419801.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\2ff69997-761e-4d28-a88e-35e9d1419801.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\3639ceab-b543-4db2-9596-156d3881e2d2.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\3639ceab-b543-4db2-9596-156d3881e2d2.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\3ae436a7-f574-4e23-af6e-e4d57927effe.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\3ae436a7-f574-4e23-af6e-e4d57927effe.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\3fafb36d-b81f-4a05-88c9-00f8a1354bd0.docx",
+      "PackagePath": "staticwebassets\\uploads\\cv\\3fafb36d-b81f-4a05-88c9-00f8a1354bd0.docx"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\41a72ffb-9a17-47f9-b127-8d1e1ef240b9.docx",
+      "PackagePath": "staticwebassets\\uploads\\cv\\41a72ffb-9a17-47f9-b127-8d1e1ef240b9.docx"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\469bd7d1-533d-405b-9dc9-91fe3391765d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\469bd7d1-533d-405b-9dc9-91fe3391765d.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\4924d06c-b27a-4fd6-85f9-7030aa336518.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\4924d06c-b27a-4fd6-85f9-7030aa336518.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\4cd67231-b86e-4288-9e88-e6b29f18cdc8.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\4cd67231-b86e-4288-9e88-e6b29f18cdc8.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\4d863e67-bd9c-43a3-a40f-f89766f0829b.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\4d863e67-bd9c-43a3-a40f-f89766f0829b.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\5e1adafb-3364-41ee-9c3d-782e158c2c14.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\5e1adafb-3364-41ee-9c3d-782e158c2c14.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\64d14b0f-a2e8-41ed-bb7e-f3a1ee932079.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\64d14b0f-a2e8-41ed-bb7e-f3a1ee932079.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\69916f5d-0353-4cec-b1bb-cd2c3e320071.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\69916f5d-0353-4cec-b1bb-cd2c3e320071.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\69d1a5c7-bb45-4728-ac91-dbc991cd622f.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\69d1a5c7-bb45-4728-ac91-dbc991cd622f.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\6d38d153-aadf-4392-9f78-0c99158f2eb1.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\6d38d153-aadf-4392-9f78-0c99158f2eb1.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\783dacf0-bde7-4138-9043-d76226433646.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\783dacf0-bde7-4138-9043-d76226433646.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\7a025878-3aaf-4a26-867e-06c91a6e4b1e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\7a025878-3aaf-4a26-867e-06c91a6e4b1e.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\7cee3761-1f21-49fa-bbcd-75ab2e0d1684.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\7cee3761-1f21-49fa-bbcd-75ab2e0d1684.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\7e010810-c21a-485e-a8f1-8d93fc431ba1.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\7e010810-c21a-485e-a8f1-8d93fc431ba1.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\86666220-36e0-457c-8943-28367b7fc3b1.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\86666220-36e0-457c-8943-28367b7fc3b1.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\8974a2b2-476f-4d3c-a88a-6e2ca0756d38.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\8974a2b2-476f-4d3c-a88a-6e2ca0756d38.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\8e2fdb62-bc6c-4159-beb4-c42c91e44158.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\8e2fdb62-bc6c-4159-beb4-c42c91e44158.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\9a622ce5-ce0b-4f46-aac5-eca0995666e3.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\9a622ce5-ce0b-4f46-aac5-eca0995666e3.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\a6eef577-e6c2-4b1d-9053-497460a6d513.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\a6eef577-e6c2-4b1d-9053-497460a6d513.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\a78f633e-07dc-49f8-9b8b-b2e1d87aaaa4.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\a78f633e-07dc-49f8-9b8b-b2e1d87aaaa4.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\a8257ce4-bc3c-49f7-a5a1-5f1abea4c01e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\a8257ce4-bc3c-49f7-a5a1-5f1abea4c01e.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\b69395f1-80f0-4da8-a0e5-b78f5dddcc26.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\b69395f1-80f0-4da8-a0e5-b78f5dddcc26.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\ba164ebd-06d1-47e0-a504-9a528835ac4e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\ba164ebd-06d1-47e0-a504-9a528835ac4e.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\bccfd977-1f84-4b01-b131-ad68a14688e4.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\bccfd977-1f84-4b01-b131-ad68a14688e4.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\c7ebb042-d959-475e-9de9-b1b5c22e4b4c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\c7ebb042-d959-475e-9de9-b1b5c22e4b4c.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\c876aa60-65c5-4930-98f8-c5c1d7e0e210.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\c876aa60-65c5-4930-98f8-c5c1d7e0e210.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\d2b3e9a9-8382-44bb-a7b1-e17f50627b54.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\d2b3e9a9-8382-44bb-a7b1-e17f50627b54.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\dbde742b-643a-4589-81f1-d0c452a3f469.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\dbde742b-643a-4589-81f1-d0c452a3f469.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\e0e08ac7-4414-475d-899e-a660557d5d4c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\e0e08ac7-4414-475d-899e-a660557d5d4c.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\e9eea0fc-aae0-4a6c-a5dc-e19b9acb52dd.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\e9eea0fc-aae0-4a6c-a5dc-e19b9acb52dd.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\eb5e596e-d0ed-4382-b472-aacaedf2edc9.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\eb5e596e-d0ed-4382-b472-aacaedf2edc9.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\ef62f5a7-73a5-4164-9465-45139ca35853.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\ef62f5a7-73a5-4164-9465-45139ca35853.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\ef79ca3f-a7cb-4e84-b6c1-8f2fcd8fe03c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\ef79ca3f-a7cb-4e84-b6c1-8f2fcd8fe03c.pdf"
+    },
+    {
+      "Id": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\fc6899b7-bd01-4814-9c2d-556918682fd9.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cv\\fc6899b7-bd01-4814-9c2d-556918682fd9.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CVApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CVApplication.props",
+      "PackagePath": "build\\CVApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CVApplication.props",
+      "PackagePath": "buildMultiTargeting\\CVApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CVApplication.props",
+      "PackagePath": "buildTransitive\\CVApplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

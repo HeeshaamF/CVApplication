@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CVApplication.Models.CV>
+
+<h2>Mes CV</h2>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Date d'upload</th>
+        <th>Score global</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    @foreach (var cv in Model)
+    {
+        <tr>
+
+            <td>@cv.Nom</td>
+
+            <td>
+                @cv.DateUpload.ToString("dd/MM/yyyy HH:mm")
+            </td>
+
+            <td>
+                @cv.ScoreGlobal %
+            </td>
+
+            <td>
+
+                <a href="/@cv.Chemin"
+                   target="_blank"
+                   class="btn btn-secondary btn-sm">
+                    Télécharger
+                </a>
+
+                <a asp-controller="Analyse"
+                   asp-action="Details"
+                   asp-route-cvId="@cv.Id"
+                   class="btn btn-success btn-sm">
+                    Voir l'analyse
+                </a>
+
+                <a asp-controller="Analyse"
+                   asp-action="Comparer"
+                   asp-route-cvId="@cv.Id"
+                   class="btn btn-primary btn-sm">
+                    Comparer avec une offre
+                </a>
+                
+                <a asp-controller="Rapport"
+                   asp-action="Telecharger"
+                   asp-route-analyseId="@cv.AnalysesCV.FirstOrDefault()?.Id"
+                   class="btn btn-info btn-sm">
+                    Télécharger le rapport PDF
+                </a>
+
+
+            </td>
+
+        </tr>
+    }
+
+    </tbody>
+
+</table>

@@ -1,0 +1,28 @@
+﻿@model CVApplication.ViewModels.ComparaisonCVViewModel
+
+<h2>Comparer mon CV à une offre</h2>
+
+<form asp-action="ComparerResult"
+      asp-controller="Analyse"
+      method="get">
+
+    <input type="hidden" asp-for="CVId" />
+
+    <div class="mb-3">
+        <label class="form-label">Offre d'emploi</label>
+
+        <select asp-for="OffreId" class="form-select">
+            <option value="">-- Choisir une offre --</option>
+
+            @foreach (var offre in Model.Offres)
+            {
+                <option value="@offre.Id">@offre.Titre</option>
+            }
+        </select>
+    </div>
+
+    <button class="btn btn-primary">
+        Comparer
+    </button>
+
+</form>

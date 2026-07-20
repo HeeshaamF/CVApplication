@@ -1,0 +1,35 @@
+﻿@model CVApplication.ViewModels.UploadCVViewModel
+
+@{
+    ViewData["Title"] = "Upload CV";
+}
+
+<div class="container mt-4">
+    <h2>Dépôt de votre CV</h2>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.Message
+        </div>
+    }
+    
+    <div asp-validation-summary="All" class="text-danger"></div>
+    
+    <form asp-action="UploadCV" asp-controller="CV" method="post" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label asp-for="Fichier" class="form-label">
+                Sélectionnez votre CV
+            </label>
+
+            <input asp-for="Fichier" type="file" class="form-control" accept=".pdf,.docx" />
+
+            <span asp-validation-for="Fichier" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Envoyer le CV
+        </button>
+    </form>
+</div>

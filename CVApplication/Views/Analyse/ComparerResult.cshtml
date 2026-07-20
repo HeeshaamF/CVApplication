@@ -1,0 +1,32 @@
+﻿@model CVApplication.ViewModels.ResultatMatchingViewModel
+
+<h2>Résultat du matching</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>CV</th>
+        <td>@Model.CV.Nom</td>
+    </tr>
+
+    <tr>
+        <th>Offre</th>
+        <td>@Model.Offre.Titre</td>
+    </tr>
+
+    <tr>
+        <th>Score de matching</th>
+        <td>
+            <span class="badge bg-success">
+                @Model.ScoreMatching %
+            </span>
+        </td>
+    </tr>
+
+</table>
+
+<a asp-controller="CV"
+   asp-action="MesCV"
+   class="btn btn-secondary">
+    Retour
+</a>
