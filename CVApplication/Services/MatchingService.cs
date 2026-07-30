@@ -16,6 +16,7 @@ public class MatchingService : IMatchingService
         if (!competences.Any())
             return 0;
 
+        // Découpage en tokens (mots entiers)
         var tokens = Regex.Split(texteCV.ToLowerInvariant(), @"[^a-z0-9#+]+")
             .Where(t => !string.IsNullOrWhiteSpace(t))
             .Select(Normalize)
@@ -28,39 +29,37 @@ public class MatchingService : IMatchingService
         {
             double score = 0;
 
+            // ✅ Matching strict : mot entier
             if (tokens.Any(t => t == skill))
             {
                 score = 1.0;
                 matchedCount++;
             }
-            else if (tokens.Any(t => t.Contains(skill) || skill.Contains(t)))
-            {
-                score = 0.7;
-                matchedCount++;
-            }
+            // ✅ Matching tolérant : faute légère (Levenshtein)
             else if (Levenshtein(skill, tokens))
             {
-                score = 0.4;
+                score = 0.7;
                 matchedCount++;
             }
 
             totalScore += score;
         }
 
-        // Si toutes les compétences attendues sont trouvées (exactes, partielles ou proches)
+        // Si toutes les compétences attendues sont trouvées
         if (matchedCount == competences.Count)
             return 100;
 
         return (int)Math.Round(totalScore / competences.Count * 100);
     }
-
     
     // Calcul de la distance d'édition/Levenshtein (méthodes Levenshtein et ComputeDistance)
     // Pour identifier les éventuelles fautes de frappe et suggérer les mots les plus proches
     private bool Levenshtein(string skill, List<string> tokens)
     {
-        return tokens.Any(t => ComputeDistance(skill, t) <= 2);
+        int threshold = skill.Length <= 4 ? 1 : 2;
+        return tokens.Any(t => ComputeDistance(skill, t) <= threshold);
     }
+
     
     private int ComputeDistance(string a, string b)
     {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "klZWJN9q2HMpfVkIgR6jet/ud7Ff/nonxegh1aC9M0A=",
+  "Hash": "uppCax6oqtlAnlHgR9cJ1hytIt/yRicTngsLvRdzD04=",
   "Source": "CVApplication",
   "BasePath": "_content/CVApplication",
   "Mode": "Default",
@@ -1936,6 +1936,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\cv\\b69395f1-80f0-4da8-a0e5-b78f5dddcc26.pdf"
     },
     {
+      "Identity": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\b8c9563a-9763-4ab7-b2a2-fed8feb32130.pdf",
+      "SourceId": "CVApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\",
+      "BasePath": "_content/CVApplication",
+      "RelativePath": "uploads/cv/b8c9563a-9763-4ab7-b2a2-fed8feb32130.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cv\\b8c9563a-9763-4ab7-b2a2-fed8feb32130.pdf"
+    },
+    {
       "Identity": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\ba164ebd-06d1-47e0-a504-9a528835ac4e.pdf",
       "SourceId": "CVApplication",
       "SourceType": "Discovered",
@@ -2029,6 +2048,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\cv\\d2b3e9a9-8382-44bb-a7b1-e17f50627b54.pdf"
+    },
+    {
+      "Identity": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\d695f923-357f-4b52-a544-cb66014a2bff.pdf",
+      "SourceId": "CVApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\",
+      "BasePath": "_content/CVApplication",
+      "RelativePath": "uploads/cv/d695f923-357f-4b52-a544-cb66014a2bff.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cv\\d695f923-357f-4b52-a544-cb66014a2bff.pdf"
     },
     {
       "Identity": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\dbde742b-643a-4589-81f1-d0c452a3f469.pdf",

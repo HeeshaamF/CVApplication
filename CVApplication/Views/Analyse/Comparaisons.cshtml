@@ -5,7 +5,9 @@
 <table class="table table-bordered mt-3">
     <thead>
     <tr>
+        <th>CV</th>
         <th>Offre</th>
+        <th>Compétences attendues</th>
         <th>Score Matching</th>
     </tr>
     </thead>
@@ -13,20 +15,71 @@
     @foreach (var a in Model.Analyses)
     {
         <tr>
+            <!-- CV -->
+            <td>
+                <a href="/@Model.CV.Chemin"
+                   target="_blank"
+                   class="btn btn-secondary btn-sm">
+                    Télécharger
+                </a>
+            </td>
+
+            <!-- Offre -->
             <td>
                 @if (a.OffreEmploi != null)
                 {
-                    <span class="badge bg-success">@a.OffreEmploi.Titre</span>
+                    @if (a.ScoreMatching >= 80)
+                    {
+                        <span class="badge bg-success">@a.OffreEmploi.Titre</span>
+                    }
+                    else if (a.ScoreMatching >= 50)
+                    {
+                        <span class="badge bg-warning text-dark">@a.OffreEmploi.Titre</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">@a.OffreEmploi.Titre</span>
+                    }
                 }
                 else
                 {
                     <span class="badge bg-secondary">Non comparé</span>
                 }
             </td>
+
+            <!-- Compétences attendues -->
+            <td>
+                @if (!string.IsNullOrEmpty(a.OffreEmploi?.CompetencesAttendues))
+                {
+                    <ul>
+                        @foreach (var c in a.OffreEmploi.CompetencesAttendues.Split(','))
+                        {
+                            <li>@c.Trim()</li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <span class="badge bg-secondary">—</span>
+                }
+            </td>
+
+            <!-- Score Matching -->
             <td>
                 @if (a.OffreEmploi != null)
                 {
-                    @($"{a.ScoreMatching} %")
+                    @if (a.ScoreMatching >= 80)
+                    {
+                        <span class="badge bg-success">@($"{a.ScoreMatching} %")</span>
+                    }
+                    else if (a.ScoreMatching >= 50)
+                    {
+                        <span class="badge bg-warning text-dark">@($"{a.ScoreMatching} %")</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">@($"{a.ScoreMatching} %")</span>
+                    }
                 }
                 else
                 {
