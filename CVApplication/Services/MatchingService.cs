@@ -29,13 +29,13 @@ public class MatchingService : IMatchingService
         {
             double score = 0;
 
-            // ✅ Matching strict : mot entier
+            // Matching strict : mot entier
             if (tokens.Any(t => t == skill))
             {
                 score = 1.0;
                 matchedCount++;
             }
-            // ✅ Matching tolérant : faute légère (Levenshtein)
+            // Matching tolérant : faute légère (Levenshtein)
             else if (Levenshtein(skill, tokens))
             {
                 score = 0.7;

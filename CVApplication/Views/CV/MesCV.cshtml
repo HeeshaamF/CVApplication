@@ -53,14 +53,14 @@
                 <a asp-controller="Rapport"
                    asp-action="Telecharger"
                    asp-route-analyseId="@cv.AnalysesCV.FirstOrDefault()?.Id"
-                   class="btn btn-info btn-sm">
+                   class="btn btn-info btn-sm text-white">
                     Télécharger le rapport PDF
                 </a>
                 
                 <a asp-controller="Analyse"
                    asp-action="Comparaisons"
                    asp-route-cvId="@cv.Id"
-                   class="btn btn-warning btn-sm">
+                   class="btn btn-warning btn-sm text-white">
                     Voir les comparaisons
                 </a>
 

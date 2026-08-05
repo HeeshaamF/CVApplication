@@ -13,27 +13,6 @@
 
 <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="alert alert-warning">
-
-            Connecté :
-            @User.Identity?.IsAuthenticated
-
-            <br/>
-
-            Nom :
-            @User.Identity?.Name
-
-            <br/>
-
-            Admin :
-            @User.IsInRole("Admin")
-
-            <br/>
-
-            Candidat :
-            @User.IsInRole("Candidat")
-
-        </div>
         <div class="container-fluid">
 
             <a class="navbar-brand" asp-controller="Home" asp-action="Index">
@@ -77,12 +56,6 @@
 
                     @if (User.IsInRole("Admin"))
                     {
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Admin" asp-action="Index">
-                                Administration
-                            </a>
-                        </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="OffreEmploi" asp-action="Index">
                                 Offres d'emploi
