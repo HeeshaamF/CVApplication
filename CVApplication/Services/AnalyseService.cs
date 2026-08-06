@@ -202,8 +202,7 @@ public class AnalyseService : IAnalyseService
     {
         return await _context.AnalyseCVs
             .Include(a => a.CV)
-            .Include(a => a.OffreEmploi)
-            .Where(a => a.CV.UserId == userId)
+            .Where(a => a.CV.UserId == userId && a.OffreEmploiId == null) 
             .OrderByDescending(a => a.CV.DateUpload)
             .ToListAsync();
     }

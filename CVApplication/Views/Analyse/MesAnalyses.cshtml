@@ -3,7 +3,6 @@
 <h2>Historique des analyses</h2>
 
 <table class="table table-striped">
-
     <thead>
     <tr>
         <th>Upload CV</th>
@@ -13,26 +12,16 @@
         <th>Lisibilité</th>
     </tr>
     </thead>
-
     <tbody>
-
     @foreach (var analyse in Model)
     {
         <tr>
-            
-            <td>@analyse.CV.DateUpload</td>
-            
+            <td>@analyse.CV.DateUpload.ToString("dd/MM/yyyy HH:mm")</td>
             <td>@analyse.CV.Nom</td>
-
             <td>@analyse.ScoreStructure %</td>
-
             <td>@analyse.ScoreCompetences %</td>
-
             <td>@analyse.ScoreLisibilite %</td>
-
         </tr>
     }
-
     </tbody>
-
 </table>

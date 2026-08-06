@@ -21,13 +21,7 @@
     </tbody>
 </table>
 
-<h3>Recommandations</h3>
-<ul>
-    @foreach (var r in Model.Analyses.First().Recommandations)
-    {
-        <li>@r.Message</li>
-    }
-</ul>
+<h3>Rapport</h3>
 
 <div class="mt-4">
     <a asp-controller="Rapport"

@@ -90,6 +90,7 @@ public class AnalyseController : Controller
         return View(model);
     }
     
+    [HttpGet]
     public async Task<IActionResult> MesAnalyses()
     {
         var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
@@ -97,10 +98,11 @@ public class AnalyseController : Controller
         if (userId == null)
             return Challenge();
 
-        var analyses = await _analyseService.GetHistoriqueAnalyses(userId);
+        var analysesCv = await _analyseService.GetHistoriqueAnalyses(userId);
 
-        return View(analyses);
+        return View(analysesCv);
     }
+
     
     [HttpGet]
     public async Task<IActionResult> Comparaisons(int cvId)
