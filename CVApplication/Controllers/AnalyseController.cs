@@ -17,37 +17,35 @@ public class AnalyseController : Controller
     [HttpGet]
     public async Task<IActionResult> Details(int cvId, int? offreId)
     {
+        // Récupérer toutes les analyses du CV
         var analyses = _analyseService.GetAnalysesByCVId(cvId);
 
-        if (!analyses.Any())
+        // Filtrer : on ne garde que l'analyse sans offre
+        var analyseCv = analyses.FirstOrDefault(a => a.OffreEmploiId == null);
+
+        if (analyseCv == null)
         {
             var cv = _analyseService.GetCVById(cvId);
 
             if (cv == null)
                 return NotFound();
 
-            OffreEmploi? offre = null;
+            // S'il n'y a aucune analyse, on en crée une
+            var nouvelleAnalyse = _analyseService.AnalyserCV(cv, null);
+            await _analyseService.SaveAnalyse(nouvelleAnalyse);
 
-            if (offreId.HasValue)
-            {
-                offre = await _offreEmploiService.GetById(offreId.Value);
-            }
-
-            var analyse = _analyseService.AnalyserCV(cv, offre);
-
-            await _analyseService.SaveAnalyse(analyse);
-
-            analyses = new List<AnalyseCV> { analyse };
+            analyseCv = nouvelleAnalyse;
         }
 
         var model = new AnalyseCVViewModel
         {
-            CV = analyses.First().CV,
-            Analyses = analyses
+            CV = analyseCv.CV,
+            Analyses = new List<AnalyseCV> { analyseCv }
         };
 
         return View(model);
     }
+
     
     [HttpGet]
     public async Task<IActionResult> Comparer(int cvId)

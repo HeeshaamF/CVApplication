@@ -1,6 +1,6 @@
 ﻿@model CVApplication.ViewModels.AnalyseCVViewModel
 
-<h2>Analyses du CV : @Model.CV.Nom</h2>
+<h2>Analyse du CV : @Model.CV.Nom</h2>
 
 <table class="table table-bordered mt-3">
     <thead>
@@ -12,31 +12,28 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var a in Model.Analyses)
-    {
-        <tr>
-            <td>@Model.CV.DateUpload.ToString("dd/MM/yyyy")</td>
-            <td>@a.ScoreStructure %</td>
-            <td>@a.ScoreCompetences %</td>
-            <td>@a.ScoreLisibilite %</td>
-        </tr>
-    }
+    <tr>
+        <td>@Model.CV.DateUpload.ToString("dd/MM/yyyy")</td>
+        <td>@Model.Analyses.First().ScoreStructure %</td>
+        <td>@Model.Analyses.First().ScoreCompetences %</td>
+        <td>@Model.Analyses.First().ScoreLisibilite %</td>
+    </tr>
     </tbody>
 </table>
 
 <h3>Recommandations</h3>
-@foreach (var a in Model.Analyses)
-{
-    <ul>
-        @foreach (var r in a.Recommandations)
-        {
-            <li>@r.Message</li>
-        }
-    </ul>
-}
+<ul>
+    @foreach (var r in Model.Analyses.First().Recommandations)
+    {
+        <li>@r.Message</li>
+    }
+</ul>
 
 <div class="mt-4">
-    <a asp-controller="Rapport" asp-action="Telecharger" asp-route-analyseId="@Model.Analyses.FirstOrDefault()?.Id" class="btn btn-info text-white">
+    <a asp-controller="Rapport"
+       asp-action="Telecharger"
+       asp-route-analyseId="@Model.Analyses.First().Id"
+       class="btn btn-info text-white">
         Télécharger le rapport PDF
     </a>
 </div>
