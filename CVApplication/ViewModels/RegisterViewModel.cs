@@ -7,11 +7,11 @@ public class RegisterViewModel {
     public string Nom { get; set; }
     
     [Required(ErrorMessage = "L'adresse mail est obligatoire.")]
-    [EmailAddress]
+    [EmailAddress(ErrorMessage = "Veuillez entrer une adresse mail valide.")]
     public string Email { get; set; }
 
     [Required(ErrorMessage = "Le mot de passe est obligatoire.")]
-    [MinLength(8, ErrorMessage = "Le mot de passe doit contenir au moins 8 caractères.")]
+    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$", ErrorMessage = "Le mot de passe doit contenir au moins 8 caractères, dont une minuscule, une majuscule et un chiffre.")]
     [DataType(DataType.Password)]
     public string MotDePasse { get; set; }
     
