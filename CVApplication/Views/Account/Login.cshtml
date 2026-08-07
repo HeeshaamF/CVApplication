@@ -33,7 +33,11 @@
                         </button>
 
                     </form>
-
+                    
+                    @section Scripts {
+                        <partial name="_ValidationScriptsPartial" />
+                    }
+                    
                     <div class="text-center mt-3">
                         <a asp-action="Register">
                             Créer un compte
