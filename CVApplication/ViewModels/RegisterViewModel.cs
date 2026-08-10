@@ -27,17 +27,23 @@ public class RegisterViewModel {
         if (string.IsNullOrEmpty(password))
             return new ValidationResult("Le mot de passe est obligatoire.");
 
+        var errors = new List<string>();
+
         if (password.Length < 8)
-            return new ValidationResult("Le mot de passe doit contenir au moins 8 caractères.");
-
+            errors.Add("au moins 8 caractères");
         if (!Regex.IsMatch(password, "[a-z]"))
-            return new ValidationResult("Le mot de passe doit contenir au moins une minuscule.");
-
+            errors.Add("une minuscule");
         if (!Regex.IsMatch(password, "[A-Z]"))
-            return new ValidationResult("Le mot de passe doit contenir au moins une majuscule.");
-
+            errors.Add("une majuscule");
         if (!Regex.IsMatch(password, "[0-9]"))
-            return new ValidationResult("Le mot de passe doit contenir au moins un chiffre.");
+            errors.Add("un chiffre");
+
+        if (errors.Any())
+        {
+            return new ValidationResult(
+                "Le mot de passe doit contenir " + string.Join(", ", errors) + "."
+            );
+        }
 
         return ValidationResult.Success;
     }
