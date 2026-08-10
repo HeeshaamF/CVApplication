@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace CVApplication.ViewModels;
 
@@ -11,12 +12,33 @@ public class RegisterViewModel {
     public string Email { get; set; }
 
     [Required(ErrorMessage = "Le mot de passe est obligatoire.")]
-    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$", ErrorMessage = "Le mot de passe doit contenir au moins 8 caractères, dont une minuscule, une majuscule et un chiffre.")]
     [DataType(DataType.Password)]
+    [CustomValidation(typeof(RegisterViewModel), nameof(ValidatePassword))]
     public string MotDePasse { get; set; }
     
     [Required(ErrorMessage = "La confirmation du mot de passe est obligatoire.")]
     [Compare("MotDePasse", ErrorMessage = "Les mots de passe ne correspondent pas.")]
     [DataType(DataType.Password)]
     public string ConfirmMotDePasse { get; set; }
+
+    // Validation personnalisée
+    public static ValidationResult? ValidatePassword(string? password, ValidationContext context)
+    {
+        if (string.IsNullOrEmpty(password))
+            return new ValidationResult("Le mot de passe est obligatoire.");
+
+        if (password.Length < 8)
+            return new ValidationResult("Le mot de passe doit contenir au moins 8 caractères.");
+
+        if (!Regex.IsMatch(password, "[a-z]"))
+            return new ValidationResult("Le mot de passe doit contenir au moins une minuscule.");
+
+        if (!Regex.IsMatch(password, "[A-Z]"))
+            return new ValidationResult("Le mot de passe doit contenir au moins une majuscule.");
+
+        if (!Regex.IsMatch(password, "[0-9]"))
+            return new ValidationResult("Le mot de passe doit contenir au moins un chiffre.");
+
+        return ValidationResult.Success;
+    }
 }
