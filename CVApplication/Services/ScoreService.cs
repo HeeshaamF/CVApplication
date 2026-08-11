@@ -23,28 +23,38 @@ public class ScoreService : IScoreService
     {
         int score = 0;
 
+        // Nettoyage des compétences (évite les chaînes vides ou parasites)
+        var competencesValides = analyse.Competences
+            .Where(c => !string.IsNullOrWhiteSpace(c))
+            .Select(c => c.ToLowerInvariant())
+            .ToList();
+
         // Hard skills
-        int hardCount = analyse.Competences.Count(c => SkillKeywords.HardSkills.Contains(c.ToLowerInvariant()));
-        score += hardCount * ScoreWeights.HardSkill;   // chaque hard skill = +10
+        int hardCount = competencesValides.Count(c => SkillKeywords.HardSkills.Contains(c));
+        score += hardCount * ScoreWeights.HardSkill;
 
         // Soft skills
-        int softCount = analyse.Competences.Count(c => SkillKeywords.SoftSkills.Contains(c.ToLowerInvariant()));
-        score += softCount * ScoreWeights.SoftSkill;    // chaque soft skill = +3
+        int softCount = competencesValides.Count(c => SkillKeywords.SoftSkills.Contains(c));
+        score += softCount * ScoreWeights.SoftSkill;
 
-        // Langues avec niveaux
-        foreach (var langue in analyse.Langues)
+        // Langues (filtrage aussi)
+        var languesValides = analyse.Langues
+            .Where(l => !string.IsNullOrWhiteSpace(l))
+            .Select(l => l.ToLowerInvariant());
+
+        foreach (var langue in languesValides)
         {
-            bool hasNiveau = SkillKeywords.NiveauxLangue.Any(n => langue.ToLowerInvariant().Contains(n));
+            bool hasNiveau = SkillKeywords.NiveauxLangue.Any(n => langue.Contains(n));
 
             if (hasNiveau)
-                score += ScoreWeights.LangueAvecNiveau; // langue avec niveau = +10
+                score += ScoreWeights.LangueAvecNiveau;
             else
-                score += ScoreWeights.LangueSansNiveau;  // langue sans niveau = +5
+                score += ScoreWeights.LangueSansNiveau;
         }
 
-        // Limite max
         return Math.Min(score, 100);
     }
+
     
     public int EvaluerLisibilite(string texte)
     {

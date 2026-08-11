@@ -32,7 +32,7 @@ public class AnalyseService : IAnalyseService
     
     public AnalyseResultat DetecterRubriques(string texte)
     {
-        // Normalisation : tout en minuscules et suppression des espaces 
+        // Normalisation : minuscules, suppression des espaces multiples
         string texteMin = Regex.Replace(texte.ToLowerInvariant(), @"\s+", " ");
 
         var resultat = new AnalyseResultat
@@ -40,32 +40,22 @@ public class AnalyseService : IAnalyseService
             HasProfil = RubriqueKeywords.ProfilRegex.IsMatch(texteMin),
             HasFormation = RubriqueKeywords.FormationRegex.IsMatch(texteMin),
             HasExperience = RubriqueKeywords.ExperienceRegex.IsMatch(texteMin),
-            HasCompetences = RubriqueKeywords.CompetencesRegex.IsMatch(texteMin),
-            // Détection des langues même sans rubrique 
-            HasLangues = RubriqueKeywords.LanguesRegex.IsMatch(texteMin) || SkillKeywords.LanguesConnues.Any(l => texteMin.Contains(l.ToLowerInvariant())),
             HasContact = RubriqueKeywords.ContactRegex.IsMatch(texteMin),
             Competences = new List<string>(),
             Langues = new List<string>()
         };
 
-        // Détection des compétences techniques
-        foreach (var skill in SkillKeywords.HardSkills)
+        // Détection des compétences techniques et soft skills
+        foreach (var skill in SkillKeywords.HardSkills.Concat(SkillKeywords.SoftSkills))
         {
-            if (texteMin.Contains(skill.ToLowerInvariant()))
+            if (!string.IsNullOrWhiteSpace(skill) && texteMin.Contains(skill.ToLowerInvariant()))
                 resultat.Competences.Add(skill);
         }
-        
-        // Détection des soft skills
-        foreach (var skill in SkillKeywords.SoftSkills)
-        {
-            if (texteMin.Contains(skill.ToLowerInvariant()))
-                resultat.Competences.Add(skill);
-        }
-        
+
         // Détection des langues avec niveaux
         foreach (var lang in SkillKeywords.LanguesConnues)
         {
-            if (texteMin.Contains(lang.ToLowerInvariant()))
+            if (!string.IsNullOrWhiteSpace(lang) && texteMin.Contains(lang.ToLowerInvariant()))
             {
                 var niveauxTrouves = SkillKeywords.NiveauxLangue
                     .Where(n => texteMin.Contains(n.ToLowerInvariant()))
@@ -82,8 +72,14 @@ public class AnalyseService : IAnalyseService
                 }
             }
         }
+
+        // ✅ Ajustement : HasCompetences et HasLangues ne sont vrais que si listes non vides
+        resultat.HasCompetences = resultat.Competences.Any();
+        resultat.HasLangues = resultat.Langues.Any();
+
         return resultat;
     }
+
 
     public AnalyseCV AnalyserCV(CV cv, OffreEmploi? offre)
     {

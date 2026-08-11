@@ -20,7 +20,6 @@ public class RapportService : IRapportService
         };
     }
 
-
     public byte[] ExporterPDF(Rapport rapport)
     {
         var document = Document.Create(container =>
@@ -29,54 +28,60 @@ public class RapportService : IRapportService
             {
                 page.Margin(30);
 
-                page.Header().Text($"Rapport d'analyse - {rapport.NomCV}").FontSize(22).Bold().FontColor(Colors.Blue.Medium);
+                // Header
+                page.Header().Text($"Rapport d'analyse - {rapport.NomCV}")
+                    .FontSize(22).Bold().FontColor(Colors.Blue.Medium);
 
                 page.Content().Column(col =>
                 {
-                    col.Spacing(15);
+                    col.Spacing(20);
 
-                    // Score global
-                    col.Item().Text($"Score global : {rapport.ScoreGlobal}%").FontSize(18).Bold().FontColor(Colors.Green.Darken2);
+                    // Score global avec couleur dynamique
+                    col.Item().Text($"Score global : {rapport.ScoreGlobal}%")
+                        .FontSize(20).Bold()
+                        .FontColor(rapport.ScoreGlobal >= 80 ? Colors.Green.Darken2 :
+                                   rapport.ScoreGlobal >= 50 ? Colors.Orange.Darken2 :
+                                   Colors.Red.Darken2);
 
-                    // Résumé
-                    col.Item().Text($"Résumé des scores : ").FontSize(14);
-
-                    // Tableau des sous-scores
-                    col.Item().Table(table =>
+                    // Fonction utilitaire pour afficher une barre de progression
+                    void AddProgress(string label, double value)
                     {
-                        table.ColumnsDefinition(columns =>
+                        col.Item().Row(row =>
                         {
-                            columns.RelativeColumn();
-                            columns.RelativeColumn();
+                            row.RelativeColumn().Text(label).FontSize(12).Bold();
+                            row.RelativeColumn().Stack(stack =>
+                            {
+                                stack.Item().Border(1).Background(Colors.Grey.Lighten2)
+                                    .Height(15f) // ✅ float
+                                    .Row(inner =>
+                                    {
+                                        inner.RelativeColumn((float)value) // ✅ cast en float
+                                            .Background(
+                                                value >= 80 ? Colors.Green.Darken2 :
+                                                value >= 50 ? Colors.Orange.Darken2 :
+                                                Colors.Red.Darken2);
+                                    });
+                                stack.Item().Text($"{value}%").AlignRight().FontSize(10);
+                            });
                         });
+                    }
 
-                        table.Header(header =>
-                        {
-                            header.Cell().Text("Critère").Bold();
-                            header.Cell().Text("Score").Bold();
-                        });
-
-                        table.Cell().Text("Structure");
-                        table.Cell().Text($"{rapport.Resume.Split(',')[0].Split('=')[1]}");
-
-                        table.Cell().Text("Compétences");
-                        table.Cell().Text($"{rapport.Resume.Split(',')[1].Split('=')[1]}");
-
-                        table.Cell().Text("Lisibilité");
-                        table.Cell().Text($"{rapport.Resume.Split(',')[2].Split('=')[1]}");
-                        
-                    });
+                    // Sous-scores
+                    AddProgress("Structure", rapport.ScoreStructure);
+                    AddProgress("Compétences", rapport.ScoreCompetences);
+                    AddProgress("Lisibilité", rapport.ScoreLisibilite);
 
                     // Recommandations
-                    col.Item().Text("Recommandations :").FontSize(16).Bold().FontColor(Colors.Red.Medium);
+                    col.Item().Text("Recommandations :")
+                        .FontSize(16).Bold().FontColor(Colors.Blue.Medium);
 
                     foreach (var rec in rapport.Recommandations)
                     {
                         string badge = rec.Priorite switch
                         {
-                            1 => "Critique",
-                            2 => "Important",
-                            3 => "Optionnel",
+                            1 => "⚠️ Critique",
+                            2 => "⭐ Important",
+                            3 => "ℹ️ Optionnel",
                             _ => ""
                         };
 
@@ -84,7 +89,10 @@ public class RapportService : IRapportService
                     }
                 });
 
-                page.Footer().AlignCenter().Text("CVApplication - Rapport généré automatiquement").FontSize(10).FontColor(Colors.Grey.Darken1);
+                // Footer
+                page.Footer().AlignCenter()
+                    .Text($"CVApplication - Rapport généré automatiquement le {DateTime.Now:dd/MM/yyyy HH:mm}")
+                    .FontSize(10).FontColor(Colors.Grey.Darken1);
             });
         });
 
