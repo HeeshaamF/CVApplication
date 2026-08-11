@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/CVApplication.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"/>
 </head>
-<body>
+<body class="bg-light">
 
 <header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow-sm">
         <div class="container-fluid">
 
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                CVApplication
+            <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+                <i class="bi bi-file-earmark-person"></i> CVApplication
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -26,10 +27,9 @@
             <div class="collapse navbar-collapse" id="navbarContent">
 
                 <ul class="navbar-nav me-auto">
-
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">
-                            Accueil
+                            <i class="bi bi-house"></i> Accueil
                         </a>
                     </li>
 
@@ -37,19 +37,17 @@
                     {
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="CV" asp-action="MesCV">
-                                Mes CV
+                                <i class="bi bi-file-earmark-text"></i> Mes CV
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="CV" asp-action="UploadCV">
-                                Déposer un CV
+                                <i class="bi bi-upload"></i> Déposer un CV
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Analyse" asp-action="MesAnalyses">
-                                Mes analyses
+                                <i class="bi bi-bar-chart"></i> Mes analyses
                             </a>
                         </li>
                     }
@@ -58,42 +56,32 @@
                     {
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="OffreEmploi" asp-action="Index">
-                                Offres d'emploi
+                                <i class="bi bi-briefcase"></i> Offres d'emploi
                             </a>
                         </li>
                     }
-
                 </ul>
 
                 <ul class="navbar-nav">
-
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
                     {
-                       
                         <li class="nav-item">
-
-                            <form asp-controller="Account" asp-action="Logout" method="post">
-
+                            <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
                                 @Html.AntiForgeryToken()
-
-                                <button type="submit" class="btn btn-link nav-link">
-                                    Déconnexion
+                                <button type="submit" class="btn btn-outline-light btn-sm">
+                                    <i class="bi bi-box-arrow-right"></i> Déconnexion
                                 </button>
-
                             </form>
-
                         </li>
                     }
-
                 </ul>
 
             </div>
-
         </div>
     </nav>
 </header>
 
-<div class="container">
+<div class="container p-4 mt-3">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>

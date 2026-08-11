@@ -1,92 +1,98 @@
 ﻿@model CVApplication.ViewModels.AnalyseCVViewModel
 
-<h2>Comparaisons du CV : @Model.CV.Nom</h2>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        <h2><i class="bi bi-diagram-2"></i> Comparaisons du CV : @Model.CV.Nom</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>CV</th>
+                    <th>Offre</th>
+                    <th>Compétences attendues</th>
+                    <th>Score Matching</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var a in Model.Analyses)
+                {
+                    <tr>
+                        <!-- CV -->
+                        <td>
+                            <span class="fw-bold">@Model.CV.Nom</span><br />
+                            <small class="text-muted">@Model.CV.DateUpload.ToString("dd/MM/yyyy HH:mm")</small><br />
+                            <a href="/@Model.CV.Chemin" target="_blank" class="btn btn-secondary btn-sm mt-1">
+                                <i class="bi bi-download"></i> Télécharger
+                            </a>
+                        </td>
 
-<table class="table table-bordered mt-3">
-    <thead>
-    <tr>
-        <th>CV</th>
-        <th>Offre</th>
-        <th>Compétences attendues</th>
-        <th>Score Matching</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var a in Model.Analyses)
-    {
-        <tr>
-            <!-- CV -->
-            <td>
-                <a href="/@Model.CV.Chemin"
-                   target="_blank"
-                   class="btn btn-secondary btn-sm">
-                    Télécharger
-                </a>
-            </td>
+                        <!-- Offre -->
+                        <td>
+                            @if (a.OffreEmploi != null)
+                            {
+                                @if (a.ScoreMatching >= 80)
+                                {
+                                    <span class="badge bg-success">@a.OffreEmploi.Titre</span>
+                                }
+                                else if (a.ScoreMatching >= 50)
+                                {
+                                    <span class="badge bg-warning text-dark">@a.OffreEmploi.Titre</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">@a.OffreEmploi.Titre</span>
+                                }
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Non comparé</span>
+                            }
+                        </td>
 
-            <!-- Offre -->
-            <td>
-                @if (a.OffreEmploi != null)
-                {
-                    @if (a.ScoreMatching >= 80)
-                    {
-                        <span class="badge bg-success">@a.OffreEmploi.Titre</span>
-                    }
-                    else if (a.ScoreMatching >= 50)
-                    {
-                        <span class="badge bg-warning text-dark">@a.OffreEmploi.Titre</span>
-                    }
-                    else
-                    {
-                        <span class="badge bg-danger">@a.OffreEmploi.Titre</span>
-                    }
-                }
-                else
-                {
-                    <span class="badge bg-secondary">Non comparé</span>
-                }
-            </td>
+                        <!-- Compétences attendues -->
+                        <td>
+                            @if (!string.IsNullOrEmpty(a.OffreEmploi?.CompetencesAttendues))
+                            {
+                                @foreach (var c in a.OffreEmploi.CompetencesAttendues.Split(','))
+                                {
+                                    <span class="badge bg-info text-dark me-1">@c.Trim()</span>
+                                }
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">—</span>
+                            }
+                        </td>
 
-            <!-- Compétences attendues -->
-            <td>
-                @if (!string.IsNullOrEmpty(a.OffreEmploi?.CompetencesAttendues))
-                {
-                    <ul>
-                        @foreach (var c in a.OffreEmploi.CompetencesAttendues.Split(','))
-                        {
-                            <li>@c.Trim()</li>
-                        }
-                    </ul>
+                        <!-- Score Matching -->
+                        <td>
+                            @if (a.OffreEmploi != null)
+                            {
+                                <div class="progress" style="height: 20px; position: relative;">
+                                    <div class="progress-bar 
+                                        @(a.ScoreMatching >= 80 ? "bg-success" 
+                                            : a.ScoreMatching >= 50 ? "bg-warning" 
+                                            : a.ScoreMatching > 0 ? "bg-danger" 
+                                            : "bg-secondary")"
+                                         role="progressbar"
+                                         style="width:@(a.ScoreMatching > 0 ? a.ScoreMatching : 5)%">
+                                    </div>
+                                    <span class="position-absolute w-100 text-center fw-bold 
+                                        @(a.ScoreMatching >= 50 ? "text-white" : "text-dark")" 
+                                        style="top: 0; left: 0;">
+                                        @a.ScoreMatching %
+                                    </span>
+                                </div>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">—</span>
+                            }
+                        </td>
+                    </tr>
                 }
-                else
-                {
-                    <span class="badge bg-secondary">—</span>
-                }
-            </td>
-
-            <!-- Score Matching -->
-            <td>
-                @if (a.OffreEmploi != null)
-                {
-                    @if (a.ScoreMatching >= 80)
-                    {
-                        <span class="badge bg-success">@($"{a.ScoreMatching} %")</span>
-                    }
-                    else if (a.ScoreMatching >= 50)
-                    {
-                        <span class="badge bg-warning text-dark">@($"{a.ScoreMatching} %")</span>
-                    }
-                    else
-                    {
-                        <span class="badge bg-danger">@($"{a.ScoreMatching} %")</span>
-                    }
-                }
-                else
-                {
-                    <span class="badge bg-secondary">—</span>
-                }
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+            </tbody>
+        </table>
+    </div>
+</div>

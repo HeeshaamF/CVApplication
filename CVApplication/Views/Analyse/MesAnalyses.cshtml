@@ -1,27 +1,84 @@
 ﻿@model IEnumerable<CVApplication.Models.AnalyseCV>
 
-<h2>Historique des analyses</h2>
-
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Upload CV</th>
-        <th>CV</th>
-        <th>Structure</th>
-        <th>Compétences</th>
-        <th>Lisibilité</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var analyse in Model)
-    {
-        <tr>
-            <td>@analyse.CV.DateUpload.ToString("dd/MM/yyyy HH:mm")</td>
-            <td>@analyse.CV.Nom</td>
-            <td>@analyse.ScoreStructure %</td>
-            <td>@analyse.ScoreCompetences %</td>
-            <td>@analyse.ScoreLisibilite %</td>
-        </tr>
-    }
-    </tbody>
-</table>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        <h2><i class="bi bi-clock-history"></i> Historique des analyses</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th><i class="bi bi-calendar"></i> Upload CV</th>
+                    <th><i class="bi bi-file-earmark-text"></i> CV</th>
+                    <th><i class="bi bi-diagram-3"></i> Structure</th>
+                    <th><i class="bi bi-tools"></i> Compétences</th>
+                    <th><i class="bi bi-eye"></i> Lisibilité</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var analyse in Model)
+            {
+                <tr>
+                    <td>@analyse.CV.DateUpload.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        <span class="badge bg-info text-dark">
+                            @analyse.CV.Nom
+                        </span>
+                    </td>
+                    <td>
+                        <div class="progress" style="height: 20px; position: relative;">
+                            <div class="progress-bar 
+                                @(analyse.ScoreStructure >= 80 ? "bg-success" 
+                                  : analyse.ScoreStructure >= 50 ? "bg-warning" 
+                                  : analyse.ScoreStructure > 0 ? "bg-danger" 
+                                  : "bg-secondary")"
+                                role="progressbar"
+                                style="width:@(analyse.ScoreStructure > 0 ? analyse.ScoreStructure : 5)%">
+                            </div>
+                            <span class="position-absolute w-100 text-center fw-bold 
+                                @(analyse.ScoreStructure >= 50 ? "text-white" : "text-dark")" 
+                                style="top: 0; left: 0;">
+                                @analyse.ScoreStructure %
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="progress" style="height: 20px; position: relative;">
+                            <div class="progress-bar 
+                                @(analyse.ScoreCompetences >= 80 ? "bg-success" 
+                                  : analyse.ScoreCompetences >= 50 ? "bg-warning" 
+                                  : analyse.ScoreCompetences > 0 ? "bg-danger" 
+                                  : "bg-secondary")"
+                                role="progressbar"
+                                style="width:@(analyse.ScoreCompetences > 0 ? analyse.ScoreCompetences : 5)%">
+                            </div>
+                            <span class="position-absolute w-100 text-center fw-bold 
+                                @(analyse.ScoreCompetences >= 50 ? "text-white" : "text-dark")" 
+                                style="top: 0; left: 0;">
+                                @analyse.ScoreCompetences %
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="progress" style="height: 20px; position: relative;">
+                            <div class="progress-bar 
+                                @(analyse.ScoreLisibilite >= 80 ? "bg-success" 
+                                  : analyse.ScoreLisibilite >= 50 ? "bg-warning" 
+                                  : analyse.ScoreLisibilite > 0 ? "bg-danger" 
+                                  : "bg-secondary")"
+                                role="progressbar"
+                                style="width:@(analyse.ScoreLisibilite > 0 ? analyse.ScoreLisibilite : 5)%">
+                            </div>
+                            <span class="position-absolute w-100 text-center fw-bold 
+                                @(analyse.ScoreLisibilite >= 50 ? "text-white" : "text-dark")" 
+                                style="top: 0; left: 0;">
+                                @analyse.ScoreLisibilite %
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

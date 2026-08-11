@@ -4,32 +4,40 @@
     ViewData["Title"] = "Upload CV";
 }
 
-<div class="container mt-4">
-    <h2>Dépôt de votre CV</h2>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        <h2><i class="bi bi-upload"></i> Dépôt de votre CV</h2>
+    </div>
+    <div class="card-body">
 
-    @if (ViewBag.Message != null)
-    {
-        <div class="alert alert-success">
-            @ViewBag.Message
-        </div>
-    }
-    
-    <div asp-validation-summary="All" class="text-danger"></div>
-    
-    <form asp-action="UploadCV" asp-controller="CV" method="post" enctype="multipart/form-data">
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-success">
+                <i class="bi bi-check-circle"></i> @ViewBag.Message
+            </div>
+        }
 
-        <div class="mb-3">
-            <label asp-for="Fichier" class="form-label">
-                Sélectionnez votre CV
-            </label>
+        <!-- Résumé des erreurs globales -->
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-            <input asp-for="Fichier" type="file" class="form-control" accept=".pdf,.docx" />
+        <form asp-action="UploadCV" asp-controller="CV" method="post" enctype="multipart/form-data">
 
-            <span asp-validation-for="Fichier" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="Fichier" class="form-label fw-bold">
+                    <i class="bi bi-file-earmark-text"></i> Sélectionnez votre CV
+                </label>
 
-        <button type="submit" class="btn btn-primary">
-            Envoyer le CV
-        </button>
-    </form>
+                <input asp-for="Fichier" type="file" class="form-control" accept=".pdf,.docx" />
+
+                <span asp-validation-for="Fichier" class="text-danger small"></span>
+                <div class="form-text">
+                    Formats acceptés : PDF ou DOCX
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+                <i class="bi bi-send"></i> Envoyer le CV
+            </button>
+        </form>
+    </div>
 </div>

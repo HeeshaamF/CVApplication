@@ -2,82 +2,71 @@
     ViewData["Title"] = "Accueil";
 }
 
-<div class="container">
-
+<div class="container mt-5">
     <div class="row justify-content-center">
-
-        <div class="col-md-8 text-center mt-5">
+        <div class="col-md-8 text-center">
 
             @if (!User.Identity!.IsAuthenticated)
             {
-                <h1 class="display-3 text-primary fw-bold">
-                    CV Application
+                <h1 class="display-3 text-primary fw-bold mb-4">
+                    <i class="bi bi-file-earmark-person"></i> CV Application
                 </h1>
 
-                <p class="lead mt-4">
+                <p class="lead text-muted">
                     Plateforme intelligente d'analyse et de correction automatique de CV.
                 </p>
-
-                <p>
+                <p class="mb-4">
                     Déposez votre CV et obtenez des recommandations personnalisées.
                 </p>
 
-                <div class="mt-5">
-                    <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg me-3">
-                        Connexion
+                <div class="mt-4">
+                    <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="bi bi-box-arrow-in-right"></i> Connexion
                     </a>
-
                     <a asp-controller="Account" asp-action="Register" class="btn btn-success btn-lg">
-                        Inscription
+                        <i class="bi bi-person-plus"></i> Inscription
                     </a>
                 </div>
             }
             else if (User.IsInRole("Admin"))
             {
-                <h1 class="display-3 text-danger fw-bold">
-                    Espace Administrateur
+                <h1 class="display-3 text-danger fw-bold mb-4">
+                    <i class="bi bi-shield-lock"></i> Espace Administrateur
                 </h1>
 
-                <p class="lead mt-4">
-                    Bienvenue @User.Identity.Name
+                <p class="lead text-muted">
+                    Bienvenue <strong>@User.Identity.Name</strong>
                 </p>
 
-                <div class="mt-5">
-                    
+                <div class="mt-4">
                     <a asp-controller="OffreEmploi" asp-action="Index" class="btn btn-primary btn-lg">
-                        Offres d'emploi
+                        <i class="bi bi-briefcase"></i> Offres d'emploi
                     </a>
-
                 </div>
             }
             else
             {
-                <h1 class="display-3 text-primary fw-bold">
-                    Espace Candidat
+                <h1 class="display-3 text-primary fw-bold mb-4">
+                    <i class="bi bi-person-workspace"></i> Espace Candidat
                 </h1>
 
-                <p class="lead mt-4">
-                    Bienvenue @User.Identity.Name
+                <p class="lead text-muted">
+                    Bienvenue <strong>@User.Identity.Name</strong>
                 </p>
 
-                <div class="mt-5">
-                    
+                <div class="mt-4">
                     <a asp-controller="CV" asp-action="MesCV" class="btn btn-info btn-lg me-3 text-white">
-                        Mes CV
+                        <i class="bi bi-file-earmark-text"></i> Mes CV
                     </a>
-                    
                     <a asp-controller="CV" asp-action="UploadCV" class="btn btn-primary btn-lg me-3">
-                        Déposer un CV
+                        <i class="bi bi-upload"></i> Déposer un CV
                     </a>
-
                     <a asp-controller="Analyse" asp-action="MesAnalyses" class="btn btn-success btn-lg">
-                        Mes analyses
+                        <i class="bi bi-bar-chart"></i> Mes analyses
                     </a>
                 </div>
             }
 
         </div>
-
     </div>
-
 </div>

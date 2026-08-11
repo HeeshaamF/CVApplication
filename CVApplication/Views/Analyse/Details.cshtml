@@ -1,33 +1,85 @@
 ﻿@model CVApplication.ViewModels.AnalyseCVViewModel
 
-<h2>Analyse du CV : @Model.CV.Nom</h2>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        <h2><i class="bi bi-bar-chart"></i> Analyse du CV : @Model.CV.Nom</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Date CV</th>
+                    <th>Structure</th>
+                    <th>Compétences</th>
+                    <th>Lisibilité</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.CV.DateUpload.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <div class="progress" style="height: 20px; position: relative;">
+                            <div class="progress-bar 
+                                @(Model.Analyses.First().ScoreStructure >= 80 ? "bg-success" 
+                                  : Model.Analyses.First().ScoreStructure >= 50 ? "bg-warning" 
+                                  : Model.Analyses.First().ScoreStructure > 0 ? "bg-danger" 
+                                  : "bg-secondary")"
+                                role="progressbar"
+                                style="width:@(Model.Analyses.First().ScoreStructure > 0 ? Model.Analyses.First().ScoreStructure : 5)%">
+                            </div>
+                            <span class="position-absolute w-100 text-center fw-bold 
+                                @(Model.Analyses.First().ScoreStructure >= 50 ? "text-white" : "text-dark")" 
+                                style="top: 0; left: 0;">
+                                @Model.Analyses.First().ScoreStructure %
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="progress" style="height: 20px; position: relative;">
+                            <div class="progress-bar 
+                                @(Model.Analyses.First().ScoreCompetences >= 80 ? "bg-success" 
+                                  : Model.Analyses.First().ScoreCompetences >= 50 ? "bg-warning" 
+                                  : Model.Analyses.First().ScoreCompetences > 0 ? "bg-danger" 
+                                  : "bg-secondary")"
+                                role="progressbar"
+                                style="width:@(Model.Analyses.First().ScoreCompetences > 0 ? Model.Analyses.First().ScoreCompetences : 5)%">
+                            </div>
+                            <span class="position-absolute w-100 text-center fw-bold 
+                                @(Model.Analyses.First().ScoreCompetences >= 50 ? "text-white" : "text-dark")" 
+                                style="top: 0; left: 0;">
+                                @Model.Analyses.First().ScoreCompetences %
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="progress" style="height: 20px; position: relative;">
+                            <div class="progress-bar 
+                                @(Model.Analyses.First().ScoreLisibilite >= 80 ? "bg-success" 
+                                  : Model.Analyses.First().ScoreLisibilite >= 50 ? "bg-warning" 
+                                  : Model.Analyses.First().ScoreLisibilite > 0 ? "bg-danger" 
+                                  : "bg-secondary")"
+                                role="progressbar"
+                                style="width:@(Model.Analyses.First().ScoreLisibilite > 0 ? Model.Analyses.First().ScoreLisibilite : 5)%">
+                            </div>
+                            <span class="position-absolute w-100 text-center fw-bold 
+                                @(Model.Analyses.First().ScoreLisibilite >= 50 ? "text-white" : "text-dark")" 
+                                style="top: 0; left: 0;">
+                                @Model.Analyses.First().ScoreLisibilite %
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-<table class="table table-bordered mt-3">
-    <thead>
-    <tr>
-        <th>Date CV</th>
-        <th>Structure</th>
-        <th>Compétences</th>
-        <th>Lisibilité</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>@Model.CV.DateUpload.ToString("dd/MM/yyyy")</td>
-        <td>@Model.Analyses.First().ScoreStructure %</td>
-        <td>@Model.Analyses.First().ScoreCompetences %</td>
-        <td>@Model.Analyses.First().ScoreLisibilite %</td>
-    </tr>
-    </tbody>
-</table>
-
-<h3>Rapport</h3>
-
-<div class="mt-4">
-    <a asp-controller="Rapport"
-       asp-action="Telecharger"
-       asp-route-analyseId="@Model.Analyses.First().Id"
-       class="btn btn-info text-white">
-        Télécharger le rapport PDF
-    </a>
+        <h3 class="mt-4">Rapport</h3>
+        <div class="mt-3">
+            <a asp-controller="Rapport"
+               asp-action="Telecharger"
+               asp-route-analyseId="@Model.Analyses.First().Id"
+               class="btn btn-info text-white">
+                <i class="bi bi-file-earmark-pdf"></i> Télécharger le rapport PDF
+            </a>
+        </div>
+    </div>
 </div>

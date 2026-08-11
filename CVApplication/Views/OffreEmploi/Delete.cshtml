@@ -4,30 +4,31 @@
     ViewData["Title"] = "Supprimer l'offre";
 }
 
-<h2 class="text-danger">Supprimer l'offre</h2>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-danger text-white">
+        <h2><i class="bi bi-trash"></i> Supprimer l'offre</h2>
+    </div>
+    <div class="card-body">
+        <div class="alert alert-warning d-flex align-items-center">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <span>Êtes-vous sûr de vouloir supprimer cette offre ?</span>
+        </div>
 
-<div class="alert alert-warning">
-    Êtes-vous sûr de vouloir supprimer cette offre ?
+        <div class="card p-3 mb-3 border">
+            <p><strong><i class="bi bi-card-text"></i> Titre :</strong> @Model.Titre</p>
+            <p><strong><i class="bi bi-info-circle"></i> Description :</strong> @Model.Description</p>
+            <p><strong><i class="bi bi-tools"></i> Compétences :</strong> @Model.CompetencesAttendues</p>
+        </div>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+
+            <button type="submit" class="btn btn-danger me-2">
+                <i class="bi bi-check-circle"></i> Oui, supprimer
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-x-circle"></i> Annuler
+            </a>
+        </form>
+    </div>
 </div>
-
-<div class="card p-3 mb-3">
-
-    <p><strong>Titre :</strong> @Model.Titre</p>
-    <p><strong>Description :</strong> @Model.Description</p>
-    <p><strong>Compétences :</strong> @Model.CompetencesAttendues</p>
-
-</div>
-
-<form asp-action="Delete" method="post">
-
-    <input type="hidden" asp-for="Id" />
-
-    <button type="submit" class="btn btn-danger">
-        Oui, supprimer
-    </button>
-
-    <a asp-action="Index" class="btn btn-secondary">
-        Annuler
-    </a>
-
-</form>

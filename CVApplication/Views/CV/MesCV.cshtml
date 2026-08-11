@@ -1,75 +1,65 @@
 ﻿@model IEnumerable<CVApplication.Models.CV>
 
-<h2>Mes CV</h2>
-
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Nom</th>
-        <th>Date d'upload</th>
-        <th>Score global</th>
-        <th>Actions</th>
-    </tr>
-    </thead>
-
-    <tbody>
-
-    @foreach (var cv in Model)
-    {
-        <tr>
-
-            <td>@cv.Nom</td>
-
-            <td>
-                @cv.DateUpload.ToString("dd/MM/yyyy HH:mm")
-            </td>
-
-            <td>
-                @cv.ScoreGlobal %
-            </td>
-
-            <td>
-
-                <a href="/@cv.Chemin"
-                   target="_blank"
-                   class="btn btn-secondary btn-sm">
-                    Télécharger
-                </a>
-
-                <a asp-controller="Analyse"
-                   asp-action="Details"
-                   asp-route-cvId="@cv.Id"
-                   class="btn btn-success btn-sm">
-                    Voir l'analyse
-                </a>
-
-                <a asp-controller="Analyse"
-                   asp-action="Comparer"
-                   asp-route-cvId="@cv.Id"
-                   class="btn btn-primary btn-sm">
-                    Comparer avec une offre
-                </a>
-                
-                <a asp-controller="Rapport"
-                   asp-action="Telecharger"
-                   asp-route-analyseId="@cv.AnalysesCV.FirstOrDefault()?.Id"
-                   class="btn btn-info btn-sm text-white">
-                    Télécharger le rapport PDF
-                </a>
-                
-                <a asp-controller="Analyse"
-                   asp-action="Comparaisons"
-                   asp-route-cvId="@cv.Id"
-                   class="btn btn-warning btn-sm text-white">
-                    Voir les comparaisons
-                </a>
-
-
-            </td>
-
-        </tr>
-    }
-
-    </tbody>
-
-</table>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        <h2><i class="bi bi-file-earmark-text"></i> Mes CV</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Nom</th>
+                    <th>Date d'upload</th>
+                    <th>Score global</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cv in Model)
+                {
+                    <tr>
+                        <td>@cv.Nom</td>
+                        <td>@cv.DateUpload.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>
+                            <div class="progress" style="height: 20px; position: relative;">
+                                <div class="progress-bar 
+                                     @(cv.ScoreGlobal >= 80 ? "bg-success" 
+                                     : cv.ScoreGlobal >= 50 ? "bg-warning" 
+                                     : cv.ScoreGlobal > 0 ? "bg-danger" 
+                                     : "bg-secondary")"
+                                     role="progressbar"
+                                     style="width:@(cv.ScoreGlobal > 0 ? cv.ScoreGlobal : 5)%">
+                                </div>
+                                <span class="position-absolute w-100 text-center fw-bold 
+                                    @(cv.ScoreGlobal >= 50 ? "text-white" : "text-dark")" 
+                                    style="top: 0; left: 0;">
+                                    @cv.ScoreGlobal %
+                                </span>
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a href="/@cv.Chemin" target="_blank" class="btn btn-secondary btn-sm">
+                                    <i class="bi bi-download"></i> Télécharger
+                                </a>
+                                <a asp-controller="Analyse" asp-action="Details" asp-route-cvId="@cv.Id" class="btn btn-success btn-sm">
+                                    <i class="bi bi-search"></i> Voir l'analyse
+                                </a>
+                                <a asp-controller="Analyse" asp-action="Comparer" asp-route-cvId="@cv.Id" class="btn btn-primary btn-sm">
+                                    <i class="bi bi-diagram-2"></i> Comparer
+                                </a>
+                                <a asp-controller="Rapport" asp-action="Telecharger" asp-route-analyseId="@cv.AnalysesCV.FirstOrDefault()?.Id" class="btn btn-info btn-sm text-white">
+                                    <i class="bi bi-file-earmark-pdf"></i> Rapport PDF
+                                </a>
+                                <a asp-controller="Analyse" asp-action="Comparaisons" asp-route-cvId="@cv.Id" class="btn btn-warning btn-sm text-white">
+                                    <i class="bi bi-bar-chart"></i> Comparaisons
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

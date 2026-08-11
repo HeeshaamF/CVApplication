@@ -2,53 +2,44 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-
         <div class="col-md-5">
-
-            <div class="card shadow">
-
-                <div class="card-header text-center">
-                    <h3>Connexion</h3>
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3><i class="bi bi-box-arrow-in-right"></i> Connexion</h3>
                 </div>
-
-                <div class="card-body">
-
+                <div class="card-body p-4">
                     <form asp-action="Login">
-                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <!-- Résumé des erreurs globales uniquement -->
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
                         <div class="mb-3">
-                            <label>Email</label>
-                            <input asp-for="Email" class="form-control"/>
-                            <span asp-validation-for="Email" class="text-danger"></span>
+                            <label class="form-label"><i class="bi bi-envelope"></i> Email</label>
+                            <input asp-for="Email" class="form-control" placeholder="exemple@mail.com"/>
+                            <span asp-validation-for="Email" class="text-danger small"></span>
                         </div>
 
                         <div class="mb-3">
-                            <label>Mot de passe</label>
-                            <input asp-for="Password" type="password" class="form-control"/>
-                            <span asp-validation-for="Password" class="text-danger"></span>
+                            <label class="form-label"><i class="bi bi-lock"></i> Mot de passe</label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="********"/>
+                            <span asp-validation-for="Password" class="text-danger small"></span>
                         </div>
 
                         <button class="btn btn-primary w-100">
-                            Se connecter
+                            <i class="bi bi-check-circle"></i> Se connecter
                         </button>
-
                     </form>
-                    
+
                     @section Scripts {
                         <partial name="_ValidationScriptsPartial" />
                     }
-                    
+
                     <div class="text-center mt-3">
-                        <a asp-action="Register">
-                            Créer un compte
+                        <a asp-action="Register" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-person-plus"></i> Créer un compte
                         </a>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </div>

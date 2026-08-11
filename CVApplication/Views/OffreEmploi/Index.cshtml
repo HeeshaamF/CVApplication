@@ -1,54 +1,50 @@
 ﻿@model IEnumerable<CVApplication.Models.OffreEmploi>
 
-<h2>Gestion des offres d'emploi</h2>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        <h2><i class="bi bi-briefcase"></i> Gestion des offres d'emploi</h2>
+    </div>
+    <div class="card-body">
+        <p>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Ajouter une offre
+            </a>
+        </p>
 
-<p>
-    <a asp-action="Create"
-       class="btn btn-success">
-        Ajouter une offre
-    </a>
-</p>
-
-<table class="table table-striped">
-
-    <thead>
-
-    <tr>
-        <th>Titre</th>
-        <th>Description</th>
-        <th>Compétences</th>
-        <th>Actions</th>
-    </tr>
-
-    </thead>
-
-    <tbody>
-
-    @foreach (var offre in Model)
-    {
-        <tr>
-
-            <td>@offre.Titre</td>
-
-            <td>@offre.Description</td>
-
-            <td>@offre.CompetencesAttendues</td>
-
-            <td>
-
-                <a asp-action="Edit" asp-route-id="@offre.Id" class="btn btn-warning btn-sm">
-                    Modifier
-                </a>
-
-                <a asp-action="Delete" asp-route-id="@offre.Id" class="btn btn-danger btn-sm">
-                    Supprimer
-                </a>
-
-            </td>
-
-        </tr>
-    }
-
-    </tbody>
-
-</table>
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-light">
+            <tr>
+                <th><i class="bi bi-card-text"></i> Titre</th>
+                <th><i class="bi bi-info-circle"></i> Description</th>
+                <th><i class="bi bi-tools"></i> Compétences</th>
+                <th><i class="bi bi-gear"></i> Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var offre in Model)
+            {
+                <tr>
+                    <td><span class="fw-bold">@offre.Titre</span></td>
+                    <td>@offre.Description</td>
+                    <td>
+                        @foreach (var comp in offre.CompetencesAttendues.Split(','))
+                        {
+                            <span class="badge bg-info text-dark me-1">@comp.Trim()</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@offre.Id" 
+                           class="btn btn-outline-warning btn-sm me-1">
+                            <i class="bi bi-pencil-square"></i> Modifier
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@offre.Id" 
+                           class="btn btn-outline-danger btn-sm">
+                            <i class="bi bi-trash"></i> Supprimer
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

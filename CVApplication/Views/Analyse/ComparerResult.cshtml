@@ -1,41 +1,48 @@
 ﻿@model CVApplication.ViewModels.ResultatMatchingViewModel
 
-<h2>Résultat du matching</h2>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        <h2><i class="bi bi-arrow-left-right"></i> Résultat du matching</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered align-middle">
+            <tr>
+                <th><i class="bi bi-file-earmark-text"></i> CV</th>
+                <td>@Model.CV.Nom</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-briefcase"></i> Offre</th>
+                <td>@Model.Offre.Titre</td>
+            </tr>
+            <tr>
+                <th><i class="bi bi-bar-chart"></i> Score de matching</th>
+                <td>
+                    <div class="progress" style="height: 25px; position: relative;">
+                        <div class="progress-bar 
+            @(Model.ScoreMatching >= 80 ? "bg-success" 
+            : Model.ScoreMatching >= 50 ? "bg-warning" 
+            : Model.ScoreMatching > 0 ? "bg-danger" 
+            : "bg-secondary")"
+                             role="progressbar"
+                             style="width:@(Model.ScoreMatching > 0 ? Model.ScoreMatching : 5)%">
+                        </div>
+                        <span class="position-absolute w-100 text-center fw-bold 
+            @(Model.ScoreMatching >= 50 ? "text-white" : "text-dark")" 
+                              style="top: 0; left: 0;">
+                            @Model.ScoreMatching %
+                        </span>
+                    </div>
+                </td>
 
-<table class="table table-bordered">
+            </tr>
+        </table>
 
-    <tr>
-        <th>CV</th>
-        <td>@Model.CV.Nom</td>
-    </tr>
-
-    <tr>
-        <th>Offre</th>
-        <td>@Model.Offre.Titre</td>
-    </tr>
-
-    <tr>
-        <th>Score de matching</th>
-        <td>
-            @if (@Model.ScoreMatching >= 80)
-            {
-                <span class="badge bg-success">@($"{@Model.ScoreMatching} %")</span>
-            }
-            else if (@Model.ScoreMatching >= 50)
-            {
-                <span class="badge bg-warning text-dark">@($"{@Model.ScoreMatching} %")</span>
-            }
-            else
-            {
-                <span class="badge bg-danger">@($"{@Model.ScoreMatching} %")</span>
-            }
-        </td>
-    </tr>
-
-</table>
-
-<a asp-controller="CV"
-   asp-action="MesCV"
-   class="btn btn-secondary">
-    Retour
-</a>
+        <div class="mt-3">
+            <a asp-controller="CV"
+               asp-action="MesCV"
+               class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Retour
+            </a>
+        </div>
+    </div>
+</div>
