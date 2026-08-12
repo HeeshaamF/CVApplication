@@ -22,45 +22,28 @@ public class MatchingService : IMatchingService
             .Select(Normalize)
             .ToList();
 
-        double totalScore = 0;
         int matchedCount = 0;
 
         foreach (var skill in competences)
         {
-            double score = 0;
-
-            // Matching strict : mot entier
-            if (tokens.Any(t => t == skill))
+            // Matching strict ou tolérant
+            if (tokens.Any(t => t == skill) || Levenshtein(skill, tokens))
             {
-                score = 1.0;
                 matchedCount++;
             }
-            // Matching tolérant : faute légère (Levenshtein)
-            else if (Levenshtein(skill, tokens))
-            {
-                score = 0.7;
-                matchedCount++;
-            }
-
-            totalScore += score;
         }
 
-        // Si toutes les compétences attendues sont trouvées
-        if (matchedCount == competences.Count)
-            return 100;
-
-        return (int)Math.Round(totalScore / competences.Count * 100);
+        // Score binaire simple : ratio compétences trouvées / attendues
+        return (int)Math.Round((double)matchedCount / competences.Count * 100);
     }
     
-    // Calcul de la distance d'édition/Levenshtein (méthodes Levenshtein et ComputeDistance)
-    // Pour identifier les éventuelles fautes de frappe et suggérer les mots les plus proches
+    // Matching tolérant : faute légère (Levenshtein)
     private bool Levenshtein(string skill, List<string> tokens)
     {
         int threshold = skill.Length <= 4 ? 1 : 2;
         return tokens.Any(t => ComputeDistance(skill, t) <= threshold);
     }
 
-    
     private int ComputeDistance(string a, string b)
     {
         var dp = new int[a.Length + 1, b.Length + 1];

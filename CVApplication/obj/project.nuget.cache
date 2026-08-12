@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sKkivmSLXAA=",
+  "dgSpecHash": "PaiybISUrE4=",
   "success": true,
   "projectFilePath": "H:\\Desktop\\CVApplication\\CVApplication\\CVApplication.csproj",
   "expectedPackageFiles": [
@@ -99,15 +99,5 @@
     "C:\\Users\\Administrateur\\.nuget\\packages\\uglytoad.pdfpig.tokenization\\1.7.0-custom-5\\uglytoad.pdfpig.tokenization.1.7.0-custom-5.nupkg.sha512",
     "C:\\Users\\Administrateur\\.nuget\\packages\\uglytoad.pdfpig.tokens\\1.7.0-custom-5\\uglytoad.pdfpig.tokens.1.7.0-custom-5.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "H:\\Desktop\\CVApplication\\CVApplication\\CVApplication.csproj",
-      "warningLevel": 1,
-      "filePath": "H:\\Desktop\\CVApplication\\CVApplication\\CVApplication.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

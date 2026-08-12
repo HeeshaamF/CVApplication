@@ -73,7 +73,6 @@ public class AnalyseService : IAnalyseService
             }
         }
 
-        // ✅ Ajustement : HasCompetences et HasLangues ne sont vrais que si listes non vides
         resultat.HasCompetences = resultat.Competences.Any();
         resultat.HasLangues = resultat.Langues.Any();
 

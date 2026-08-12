@@ -52,10 +52,10 @@ public class RapportService : IRapportService
                             row.RelativeColumn().Stack(stack =>
                             {
                                 stack.Item().Border(1).Background(Colors.Grey.Lighten2)
-                                    .Height(15f) // ✅ float
+                                    .Height(15f) 
                                     .Row(inner =>
                                     {
-                                        inner.RelativeColumn((float)value) // ✅ cast en float
+                                        inner.RelativeColumn((float)value)
                                             .Background(
                                                 value >= 80 ? Colors.Green.Darken2 :
                                                 value >= 50 ? Colors.Orange.Darken2 :
@@ -72,8 +72,7 @@ public class RapportService : IRapportService
                     AddProgress("Lisibilité", rapport.ScoreLisibilite);
 
                     // Recommandations
-                    col.Item().Text("Recommandations :")
-                        .FontSize(16).Bold().FontColor(Colors.Blue.Medium);
+                    col.Item().Text("Recommandations :").FontSize(16).Bold().FontColor(Colors.Blue.Medium);
 
                     foreach (var rec in rapport.Recommandations)
                     {
@@ -90,9 +89,7 @@ public class RapportService : IRapportService
                 });
 
                 // Footer
-                page.Footer().AlignCenter()
-                    .Text($"CVApplication - Rapport généré automatiquement le {DateTime.Now:dd/MM/yyyy HH:mm}")
-                    .FontSize(10).FontColor(Colors.Grey.Darken1);
+                page.Footer().AlignCenter().Text($"CVApplication - Rapport généré automatiquement le {DateTime.Now:dd/MM/yyyy HH:mm}").FontSize(10).FontColor(Colors.Grey.Darken1);
             });
         });
 
