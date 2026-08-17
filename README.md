@@ -12,7 +12,7 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 ## 1. Logiciels requis
 
 ### SQL Server 2025 Express
-1. Téléchargez l’installeur : `SQL2025-SSEI-Expr.exe` (dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))  
+1. Téléchargez l’installeur : `SQL2025-SSEI-Expr.exe` (dans le dossier `[Logiciels]`(https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))  
 2. Lancez l’installeur et choisissez **Installation de base**.  
 3. Suivez les étapes jusqu’à la fin (cela installe le moteur SQL Server Express).  
 4. Notez le nom de l’instance (par défaut : `SQLEXPRESS`). Vous en aurez besoin pour la connexion.
@@ -25,10 +25,11 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 5. Vérifiez que la connexion fonctionne.
 
 #### JetBrains Rider
-1. Téléchargez Rider depuis le site JetBrains.  
-2. Installez-le avec les options par défaut.  
-3. Ouvrez le projet `CVApplication` dans Rider.  
-4. Assurez-vous que le SDK .NET est bien configuré (par exemple .NET 8.0).
+1. Installez au préalable SDK .NET 8.0 (dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))
+2. Téléchargez Rider depuis le site JetBrains.  
+3. Installez-le avec les options par défaut.  
+4. Ouvrez le projet `CVApplication` dans Rider.  
+5. Assurez-vous que le SDK .NET est bien configuré (par exemple .NET 8.0).
 
 ---
 
@@ -54,3 +55,20 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
    "ConnectionStrings": {
      "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=CVApplicationDb;Trusted_Connection=True;"
    }
+   ```
+3. Dans le terminal, entrez ces lignes de commandes pour installer les packages utilisés dans le projet :
+
+   ```
+   dotnet add package Microsoft.EntityFrameworkCore --version 8.0.28
+   dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.28
+   dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.28
+   dotnet tool install --global dotnet-ef --version 8.0.0 (une seule fois)
+   dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 8.0.0
+   dotnet add package System.IdentityModel.Tokens.Jwt
+   dotnet add package Microsoft.AspNetCore.Http.Features
+   dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 8.*
+   dotnet add package DocumentFormat.OpenXml
+   dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.28
+   dotnet add package UglyToad.PdfPig --prerelease
+   dotnet add package QuestPDF
+   ```
