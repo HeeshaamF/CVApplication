@@ -12,24 +12,23 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 ## 1. Logiciels requis
 
 ### SQL Server 2025 Express
-1. Téléchargez l’installeur : `SQL2025-SSEI-Expr.exe` (dans le dossier `[Logiciels]`(https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))  
+1. Téléchargez l’installeur : `SQL2025-SSEI-Expr.exe` (disponible dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))  
 2. Lancez l’installeur et choisissez **Installation de base**.  
 3. Suivez les étapes jusqu’à la fin (cela installe le moteur SQL Server Express).  
 4. Notez le nom de l’instance (par défaut : `SQLEXPRESS`). Vous en aurez besoin pour la connexion.
 
 ### SQL Server Management Studio (SSMS)
-1. Téléchargez l’installeur : `vs_SSMS.exe` (dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))
+1. Téléchargez l’installeur : `vs_SSMS.exe` (disponible dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))
 2. Lancez l’installation et acceptez les options par défaut.  
 3. Une fois installé, ouvrez SSMS.  
 4. Connectez-vous à votre instance SQL Server (`localhost\SQLEXPRESS`).  
 5. Vérifiez que la connexion fonctionne.
 
 #### JetBrains Rider
-1. Installez au préalable SDK .NET 8.0 (dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))
+1. Installez au préalable SDK .NET 8.0 (via ce lien (https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.424/dotnet-sdk-8.0.424-win-x64.exe))
 2. Téléchargez Rider depuis le site JetBrains.  
 3. Installez-le avec les options par défaut.  
-4. Ouvrez le projet `CVApplication` dans Rider.  
-5. Assurez-vous que le SDK .NET est bien configuré (par exemple .NET 8.0).
+4. Ouvrez le projet `CVApplication` dans Rider.
 
 ---
 
