@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OLvzmw5Hcw9DTUYPsPCzFa4T05InBGcDyibqC6GiHuk=",
+  "Hash": "P4a9cJdcm+tOaxWkPVD/Zck55uqM59tTC2L/hWtjmSI=",
   "Source": "CVApplication",
   "BasePath": "_content/CVApplication",
   "Mode": "Default",
@@ -1706,6 +1706,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\cv\\69d1a5c7-bb45-4728-ac91-dbc991cd622f.pdf"
+    },
+    {
+      "Identity": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\6c738fce-eb9f-4d12-ad26-7bdc36e5d71b.pdf",
+      "SourceId": "CVApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\",
+      "BasePath": "_content/CVApplication",
+      "RelativePath": "uploads/cv/6c738fce-eb9f-4d12-ad26-7bdc36e5d71b.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cv\\6c738fce-eb9f-4d12-ad26-7bdc36e5d71b.pdf"
     },
     {
       "Identity": "H:\\Desktop\\CVApplication\\CVApplication\\wwwroot\\uploads\\cv\\6d38d153-aadf-4392-9f78-0c99158f2eb1.pdf",
