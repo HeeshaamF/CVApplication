@@ -61,7 +61,7 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
    dotnet add package Microsoft.EntityFrameworkCore --version 8.0.28
    dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.28
    dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.28
-   dotnet tool install --global dotnet-ef --version 8.0.0 (une seule fois)
+   dotnet tool install --global dotnet-ef --version 8.0.0
    dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 8.0.0
    dotnet add package System.IdentityModel.Tokens.Jwt
    dotnet add package Microsoft.AspNetCore.Http.Features
