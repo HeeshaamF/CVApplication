@@ -25,7 +25,7 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 5. Vérifiez que la connexion fonctionne.
 
 #### JetBrains Rider
-1. Installez au préalable SDK .NET 8.0 (via ce lien (https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.424/dotnet-sdk-8.0.424-win-x64.exe))
+1. Installez au préalable SDK .NET 8.0 (via ce lien https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.424/dotnet-sdk-8.0.424-win-x64.exe)
 2. Téléchargez Rider depuis le site JetBrains.  
 3. Installez-le avec les options par défaut.  
 4. Ouvrez le projet `CVApplication` dans Rider.
@@ -34,14 +34,15 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 
 ## 2. Base de données (restauration du backup)
 
-1. Copiez le fichier `CvApplicationDb.bak` dans un dossier accessible par SQL Server.  
-2. Ouvrez **SQL Server Management Studio (SSMS)**.  
-3. Connectez-vous à votre instance (`localhost\SQLEXPRESS`).  
-4. Dans l’**Explorateur d’objets**, clic droit sur **Bases de données** → **Restaurer la base de données…**.  
-5. Choisissez **Source : Dispositif** → cliquez sur **…** → ajoutez le fichier `CvApplicationDb.bak`.  
-6. Donnez un nom à la base restaurée (par exemple `CVApplicationDb`).  
-7. Cliquez sur **OK** pour lancer la restauration.  
-8. Vérifiez que la base apparaît dans l’explorateur avec toutes les tables (`CVs`, `AnalysesCV`, `OffresEmploi`, `Recommandations`).
+1. Téléchargez l'archive `CvApplicationDb.zip`
+2. Récupérez le fichier `CvApplicationDb.bak` de l'archive dans un dossier accessible par SQL Server.  
+3. Ouvrez **SQL Server Management Studio (SSMS)**.  
+4. Connectez-vous à votre instance (`localhost\SQLEXPRESS`).  
+5. Dans l’**Explorateur d’objets**, clic droit sur **Bases de données** → **Restaurer la base de données…**.  
+6. Choisissez **Source : Dispositif** → cliquez sur **…** → ajoutez le fichier `CvApplicationDb.bak`.  
+7. Donnez un nom à la base restaurée (par exemple `CVApplicationDb`).  
+8. Cliquez sur **OK** pour lancer la restauration.  
+9. Vérifiez que la base apparaît dans l’explorateur avec toutes les tables (`CVs`, `AnalysesCV`, `OffresEmploi`, `Recommandations`).
 
 ---
 
