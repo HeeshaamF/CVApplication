@@ -1,7 +1,7 @@
 # CVApplication
 
 # Description
-CVApplication est une plateforme permettant d’analyser automatiquement des CV, de détecter les rubriques essentielles (formation, expérience, compétences, langues…), de calculer un score global et de comparer le CV avec une offre d’emploi afin de générer un rapport PDF avec recommandations.
+CVApplication est une plateforme permettant d’analyser automatiquement des CV, de détecter les rubriques essentielles (formation, expérience, compétences, langues…), de calculer un score global, de comparer le CV avec une offre d’emploi et de générer un rapport PDF avec des recommandations personnalisées.
 
 ---
 
@@ -72,3 +72,6 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
    dotnet add package UglyToad.PdfPig --prerelease
    dotnet add package QuestPDF
    ```
+---
+
+## 4. Compilation et exécution
