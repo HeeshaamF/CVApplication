@@ -40,7 +40,7 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 4. Connectez-vous à votre instance (`localhost\SQLEXPRESS`).  
 5. Dans l’**Explorateur d’objets**, clic droit sur **Bases de données** → **Restaurer la base de données…**.  
 6. Choisissez **Source : Dispositif** → cliquez sur **…** → ajoutez le fichier `CvApplicationDb.bak`.  
-7. Donnez un nom à la base restaurée (par exemple `CVApplicationDb`).  
+7. Nommez la base restaurée "CVApplicationDb".  
 8. Cliquez sur **OK** pour lancer la restauration.  
 9. Vérifiez que la base apparaît dans l’explorateur avec toutes les tables (`CVs`, `AnalysesCV`, `OffresEmploi`, `Recommandations`).
 
@@ -172,7 +172,7 @@ Voici les identifiants utilisés pour **l'administrateur** :
 
 # Auteur
 
-- Heeshaam FOWDAR, élève en 4ème année à CY-Tech à Cergy
+- Heeshaam FOWDAR, élève en 4ème année à CY-Tech (ex-EISTI) à Cergy
 
 ---
 
