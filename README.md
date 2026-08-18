@@ -107,7 +107,8 @@ En cliquant sur le bouton "Voir l'analyse", nous pouvons voir les scores composa
 
 En cliquant sur le bouton "Comparer", nous pouvons comparer le CV à une offre d'emploi : 
 
-![comparaison_cv.jpg](images_ReadMe/comparaison_cv.JPG)
+![comparaison_cv.jpg](images_Readme/comparaison_cv.JPG)
+![comparaison_cv1.jpg](images_ReadMe/comparaison_cv1.JPG)
 
 Après la sélection de l'offre, nous avons le résultat du score de matching :
 
@@ -126,7 +127,7 @@ Sur le tableau de bord ou sur la barre de navigation, en cliquant sur le bouton 
 
 ![upload_cv.jpg](images_ReadMe/upload_cv.JPG)
 
-Sur le tableau de bord ou sur la barre de navigation, en cliquant sur le bouton "Mes Analyses", nous pouvons consulter la liste des analyses : 
+Sur le tableau de bord ou sur la barre de navigation, en cliquant sur le bouton "Mes Analyses", nous pouvons consulter l'historique des analyses avec, pour chaque analyse, la date d'upload de CV, le nom du CV et les scores de structure, de compétences et de lisibilité  : 
 
 ![liste_analyses_1.jpg](images_ReadMe/liste_analyses_1.JPG)
 ![liste_analyses_2.jpg](images_ReadMe/liste_analyses_2.JPG)
@@ -141,7 +142,7 @@ Après la connexion, nous sommes redirigés vers ce tableau de bord :
 
 ![accueil_admin.jpg](images_ReadMe/accueil_admin.JPG)
 
-En cliquant sur le bouton "Offres d'emploi", nous pouvons consulter la liste des offres d'emploi : 
+En cliquant sur le bouton "Offres d'emploi", nous pouvons consulter la liste des offres d'emploi avec, pour chaque offre, le titre, la description et les compétences attendues : 
 
 ![liste_offres.jpg](images_ReadMe/liste_offres.JPG)
 
