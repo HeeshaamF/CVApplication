@@ -161,7 +161,7 @@ En cliquant sur le bouton "Supprimer l'offre", nous pouvons supprimer l'offre s�
 Voici les identifiants utilisés pour **le candidat** : 
 
 - Email : ```john.doe@test.com```
-- `Mot de passe` : ```Test123!```
+- **Mot de passe** : ```Test123!```
 
 Voici les identifiants utilisés pour **l'administrateur** : 
 
