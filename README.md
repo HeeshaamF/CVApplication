@@ -139,7 +139,7 @@ Nous pouvons également nous connecter en tant qu'administrateur :
 
 Après la connexion, nous sommes redirigés vers ce tableau de bord : 
 
-![accueil_admin.jpg](images_ReadMe/accueil_admin/JPG)
+![accueil_admin.jpg](images_ReadMe/accueil_admin.JPG)
 
 En cliquant sur le bouton "Offres d'emploi", nous pouvons consulter la liste des offres d'emploi : 
 
