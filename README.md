@@ -7,7 +7,7 @@ CVApplication est une plateforme permettant d’analyser automatiquement des CV,
 
 # Installation
 
-Téléchargez localement les fichiers du projet à l'endroit désiré (git clone https://github.com/HeeshaamF/CVApplication)
+Téléchargez localement les fichiers du projet à l'endroit désiré (git clone https://github.com/HeeshaamF/CVApplication).
 
 ## 1. Logiciels requis
 
@@ -160,7 +160,7 @@ En cliquant sur le bouton "Supprimer l'offre", nous pouvons supprimer l'offre s�
 
 Voici les identifiants utilisés pour **le candidat** : 
 
-- `Email` : ```john.doe@test.com```
+- Email : ```john.doe@test.com```
 - `Mot de passe` : ```Test123!```
 
 Voici les identifiants utilisés pour **l'administrateur** : 
