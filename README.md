@@ -107,7 +107,7 @@ En cliquant sur le bouton "Voir l'analyse", nous pouvons voir les scores composa
 
 En cliquant sur le bouton "Comparer", nous pouvons comparer le CV à une offre d'emploi : 
 
-![comparaison_cv.jpg](images_Readme/comparaison_cv.JPG)
+![comparaison_cv.jpg](images_ReadMe/comparaison_cv.JPG)
 ![comparaison_cv1.jpg](images_ReadMe/comparaison_cv1.JPG)
 
 Après la sélection de l'offre, nous avons le résultat du score de matching :
