@@ -12,20 +12,20 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 ## 1. Logiciels requis
 
 ### SQL Server 2025 Express
-1. Téléchargez l’installeur : `SQL2025-SSEI-Expr.exe` (disponible dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))  
+1. Téléchargez l’installeur : `SQL2025-SSEI-Expr.exe` (disponible dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels)).
 2. Lancez l’installeur et choisissez **Installation de base**.  
 3. Suivez les étapes jusqu’à la fin (cela installe le moteur SQL Server Express).  
 4. Notez le nom de l’instance (par défaut : `SQLEXPRESS`). Vous en aurez besoin pour la connexion.
 
 ### SQL Server Management Studio (SSMS)
-1. Téléchargez l’installeur : `vs_SSMS.exe` (disponible dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels))
+1. Téléchargez l’installeur : `vs_SSMS.exe` (disponible dans le dossier [Logiciels](https://github.com/HeeshaamF/CVApplication/tree/master/Logiciels)).
 2. Lancez l’installation et acceptez les options par défaut.  
 3. Une fois installé, ouvrez SSMS.  
 4. Connectez-vous à votre instance SQL Server (`localhost\SQLEXPRESS`).  
 5. Vérifiez que la connexion fonctionne.
 
 #### JetBrains Rider
-1. Installez au préalable SDK .NET 8.0 (via ce lien https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.424/dotnet-sdk-8.0.424-win-x64.exe)
+1. Installez au préalable SDK .NET 8.0 (via ce lien https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.424/dotnet-sdk-8.0.424-win-x64.exe).
 2. Téléchargez Rider depuis le site JetBrains.  
 3. Installez-le avec les options par défaut.  
 4. Ouvrez le projet `CVApplication` dans Rider.
@@ -34,7 +34,7 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
 
 ## 2. Base de données (restauration du backup)
 
-1. Téléchargez l'archive `CvApplicationDb.zip`
+1. Téléchargez l'archive `CvApplicationDb.zip`.
 2. Récupérez le fichier `CvApplicationDb.bak` de l'archive dans un dossier accessible par SQL Server.  
 3. Ouvrez **SQL Server Management Studio (SSMS)**.  
 4. Connectez-vous à votre instance (`localhost\SQLEXPRESS`).  
@@ -80,7 +80,7 @@ Lorsque nous compilons et exécutons le programme, nous arrivons sur cette page 
 
 ![accueil.jpg](images_ReadMe/accueil.JPG)
 
-Si on clique sur le bouton "Inscription", nous arrivons sur cette page qui nous permet de nous inscrire : 
+Si on clique sur le bouton "Inscription", nous arrivons sur cette page qui nous permet de créer un compte : 
 
 ![inscription.jpg](images_ReadMe/inscription.JPG)
 
@@ -88,11 +88,11 @@ Si on clique sur le bouton "Connexion", nous arrivons sur cette page pour se con
 
 ![connexion_candidat.jpg](images_ReadMe/connexion_candidat.JPG)
 
-Après s'être inscrit ou connecté, en tant que candidat, nous sommes redirigés vers le tableau de bord : 
+Après s'être inscrit ou connecté, en tant que **candidat**, nous sommes redirigés vers le tableau de bord : 
 
 ![accueil_candidat.jpg](images_ReadMe/accueil_candidat.JPG)
 
-Depuis ce tableau de bord, il peut consulter ses CV déposés avec, pour chaque CV, la date d'upload, le nom de CV, le score global et les actions possibles : 
+Depuis ce tableau de bord, nous pouvons consulter la liste des CV déposés avec, pour chaque CV, la date d'upload, le nom de CV, le score global et les actions possibles : 
 
 ![liste_cv_1.jpg](images_ReadMe/liste_cv_1.JPG)
 ![liste_cv_2.jpg](images_ReadMe/liste_cv_1.JPG)
@@ -101,7 +101,7 @@ En cliquant sur le bouton "Télécharger", nous pouvons voir le CV déposé dans
 
 ![consultation_cv.jpg](images_ReadMe/consultation_cv.JPG)
 
-En cliquant sur le bouton "Voir l'analyse", nous pouvons voir les scores composant le score global du CV: 
+En cliquant sur le bouton "Voir l'analyse", nous pouvons voir les scores composant le score global du CV : 
 
 ![analyse_cv.jpg](images_ReadMe/analyse_cv.JPG)
 
@@ -134,7 +134,7 @@ Sur le tableau de bord ou sur la barre de navigation, en cliquant sur le bouton 
 
 Sur la barre de navigation, en cliquant sur le bouton "Déconnexion", nous sommes redirigés vers la page de connexion.
 
-Nous pouvons également nous connecter en tant qu'administrateur : 
+Nous pouvons également nous connecter en tant qu'**administrateur** : 
 
 ![connexion_admin.jpg](images_ReadMe/connexion_admin.JPG)
 
@@ -158,12 +158,12 @@ En cliquant sur le bouton "Supprimer l'offre", nous pouvons supprimer l'offre s�
 
 ![supprimer_offre.jpg](images_ReadMe/supprimer_offre.JPG)
 
-Voici les identifiants utilisés pour le candidat : 
+Voici les identifiants utilisés pour **le candidat** : 
 
 - `Email` : ```john.doe@test.com```
 - `Mot de passe` : ```Test123!```
 
-Voici les identifiants utilisés pour l'administrateur : 
+Voici les identifiants utilisés pour **l'administrateur** : 
 
 - `Email` : ```admin@test.com```
 - `Mot de passe` : ```Admin12!```
@@ -178,7 +178,7 @@ Voici les identifiants utilisés pour l'administrateur :
 
 # Informations
 
-Projet réalisé dans le cadre d'une mobilité de stage à l'Université SESAME (Tunis)
+Projet réalisé dans le cadre d'une mobilité de stage à l'Université SESAME (Tunis).
 
 Tutrice : Dr Rawya BDIWI
 
