@@ -74,7 +74,7 @@ Téléchargez localement les fichiers du projet à l'endroit désiré (git clone
    ```
 ---
 
-## 4. Compilation et exécution
+# Compilation et exécution
 
 Lorsque nous compilons et exécutons le programme, nous arrivons sur cette page :
 
@@ -157,3 +157,29 @@ En cliquant sur le bouton "Modifier l'offre", nous pouvons modifier l'offre sél
 En cliquant sur le bouton "Supprimer l'offre", nous pouvons supprimer l'offre sélectionnée : 
 
 ![supprimer_offre.jpg](images_ReadMe/supprimer_offre.JPG)
+
+Voici les identifiants utilisés pour le candidat : 
+
+`Email` : ```john.doe@test.com```
+`Mot de passe` : ```Test123!```
+
+Voici les identifiants utilisés pour l'administrateur : 
+
+`Email` : ```admin@test.com```
+`Mot de passe` : ```Admin12!```
+
+---
+
+# Auteur
+
+- Heeshaam FOWDAR, élève en 4ème année à CY-Tech à Cergy
+
+---
+
+# Informations
+
+Projet réalisé dans le cadre d'une mobilité de stage à l'Université SESAME (Tunis)
+
+Tutrice : Dr Rawya BDIWI
+
+Date finale de rendu : août 2026
